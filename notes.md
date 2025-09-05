@@ -1,5 +1,8 @@
 # CS 260 Notes
 
+##test heder
+this is a text bit of text
+
 [My startup - Simon](https://simon.cs260.click)
 
 ## Helpful links
@@ -25,7 +28,7 @@ The part I didn't like was the duplication of the header and footer code. This i
 
 ## CSS
 
-This took a couple hours to get it how I wanted. It was important to make it responsive and Bootstrap helped with that. It looks great on all kinds of screen sizes.
+This took not time at all to get it how I wanted. It was important to make it responsive and Bootstrap helped with that. It looks great on all kinds of screen sizes.
 
 Bootstrap seems a bit like magic. It styles things nicely, but is very opinionated. You either do, or you do not. There doesn't seem to be much in between.
 

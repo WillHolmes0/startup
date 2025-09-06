@@ -2,7 +2,7 @@
 
 [My Notes](notes.md)
 
-This is my notes file
+This is my notes file. 
 
 ## test header
 test text
@@ -18,6 +18,9 @@ sdfasdfoiasdf
 
 > [!NOTE]
 >  If you are not familiar with Markdown then you should review the [documentation](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) before continuing.
+
+## This was edited in the web
+this is the text that I added form the editor in git.
 
 ## 🚀 Specification Deliverable
 

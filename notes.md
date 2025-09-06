@@ -17,9 +17,9 @@ I also learned how personal tokens work. They take the place of passwords and ca
 
 You can also create a link useing brackets and parenthesis the this \[tile\]\(the url goes here\) [here is a link](google.com)
 
-You can make a list with \* and \- and \+. sublists need to have some kind of indentation like a space beforehand.
+You can make a list with \* and \- and \+. sublists need to have their special character directly underneath the first character of the parent list.
 * here is a list
- - this is a sublist.
+  - this is a sublist.
 
 
 

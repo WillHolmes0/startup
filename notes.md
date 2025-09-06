@@ -5,11 +5,29 @@ this is a text bit of text
 
 [My startup - Simon](https://simon.cs260.click)
 
+
+## What I learned from the first assignmentS
+
+I learned that you can use commands to push and pull in git bash. for example: `git pull origin main`
+You can edit code and commmit it in the web editor by pressing "." when in the home page of a repository. 
+
+Also, there is syntax in markdown that you can use to add fucntionality and style to your markdown file such as **Bold**.
+
+I also learned how personal tokens work. They take the place of passwords and can be given select permissions for a file like read, write, etc. 
+
+You can also create a link useing brackets and parenthesis the this \[tile\]\(the url goes here\) [here is a link](google.com)
+
+You can make a list with \* and \- and \+. sublists need to have some kind of indentation like a space beforehand.
+* here is a list
+ - this is a sublist.
+
+
+
 ## Helpful links
 
 - [Course instruction](https://github.com/webprogramming260)
 - [Canvas](https://byu.instructure.com)
-- [MDN](https://developer.mozilla.org)
+- [MDN](https://developer.mozilla.org) 
 
 ## AWS
 

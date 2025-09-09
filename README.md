@@ -20,7 +20,7 @@ this is the text that I added form the editor in git.
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [x] Proper use of Markdown
+- [x] Proper use of Markdown - proper text usage and embedded images in markdown
 - [x] A concise and compelling elevator pitch
 - [x] Description of key features
 - [x] Description of how you will use each technology

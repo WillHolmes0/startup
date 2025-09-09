@@ -14,12 +14,13 @@ You can edit code and commmit it in the web editor by pressing "." when in the h
 Also, there is syntax in markdown that you can use to add fucntionality and style to your markdown file such as **Bold**.
 
 I also learned how personal tokens work. They take the place of passwords and can be given select permissions for a file like read, write, etc. 
+I also learned how to create a token. I also learned a bit of the differences between classic tokens and fine grained tokens.
 
 You can also create a link useing brackets and parenthesis the this \[tile\]\(the url goes here\) [here is a link](google.com)
 
-You can make a list with \* and \- and \+. sublists need to have some kind of indentation like a space beforehand.
+You can make a list with \* and \- and \+. sublists need to have their special character directly underneath the first character of the parent list.
 * here is a list
-- this is a sublist.
+  - this is a sublist.
 
 
 

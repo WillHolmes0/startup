@@ -31,11 +31,13 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 Are you someone who loves writing stories, but feel like you don't have anyeone to share your passion with? Well, now that's been solved. Story Forrest is a website that will let writers share their hobby with others who share this intrest. Here, you can post a short summary of a story you want to write, and you and others can comment on and "like" each other's ideas, providing additional ideas and positive feedback. Now you can enjoy the thrill of explaining your story ideas to others and hearing their own more than ever!
 
 ### Design
-
+### Main Page
 ![Main Page](MainPage.jpeg)
 
+### Create Story Page
 ![Create Story Page](CreateStoryPage.jpeg)
 
+### Login Page
 ![Login Page](loginPage.jpeg)
 
 

@@ -19,7 +19,7 @@ You can also create a link useing brackets and parenthesis the this \[tile\]\(th
 
 You can make a list with \* and \- and \+. sublists need to have some kind of indentation like a space beforehand.
 * here is a list
- - this is a sublist.
+- this is a sublist.
 
 
 

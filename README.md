@@ -4,20 +4,11 @@
 
 This is my notes file
 
-## test header
-test text
-
-## this is another test
-here is some random text.
-
-## 453
-sdfasdfoiasdf
-
-> [!NOTE]
+<!-- > [!NOTE]
 >  This is a template for your startup application. You must modify this `README.md` file for each phase of your development. You only need to fill in the section for each deliverable when that deliverable is submitted in Canvas. Without completing the section for a deliverable, the TA will not know what to look for when grading your submission. Feel free to add additional information to each deliverable description, but make sure you at least have the list of rubric items and a description of what you did for each item.
 
 > [!NOTE]
->  If you are not familiar with Markdown then you should review the [documentation](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) before continuing.
+>  If you are not familiar with Markdown then you should review the [documentation](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) before continuing. -->
 
 ## 🚀 Specification Deliverable
 
@@ -26,45 +17,49 @@ sdfasdfoiasdf
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] Proper use of Markdown
-- [ ] A concise and compelling elevator pitch
-- [ ] Description of key features
-- [ ] Description of how you will use each technology
+- [x] Proper use of Markdown
+- [x] A concise and compelling elevator pitch
+- [x] Description of key features
+- [x] Description of how you will use each technology
 - [ ] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
 
 ### Elevator pitch
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Are you someone who loves writing stories, but feel like you don't have anyeone to share your passion with? Well, now that's been solved. Story Forrest is a website that will let writers share their hobby with others who share this intrest. Here, you can post a short summary of a story you want to write, and you and others can comment on and "like" each other's ideas, providing additional ideas and positive feedback. Now you can enjoy the thrill of explaining your story ideas to others and hearing their own more than ever!
 
 ### Design
 
-![Design image](placeholder.png)
+![Main Page](MainPage.jpeg)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+![Create Story Page](CreateStoryPage.jpeg)
 
-```mermaid
-sequenceDiagram
-    actor You
-    actor Website
-    You->>Website: Replace this with your design
-```
+![Login Page](loginPage.jpeg)
+
 
 ### Key features
 
-- Describe your key feature
-- Describe your key feature
-- Describe your key feature
+- Each user has their own account.
+- A user can upload a summary of a story they want to write
+- These stories become available for others to see in a feed style. 
+- comment button under each post selects the post to be commented on.
+- Sidebar which allows users to comment on a post as well as view comments on that post. 
+- Gifs can be added to the comment section in place of a comment.
+- like button for each story
 
 ### Technologies
 
 I am going to use the required technologies in the following ways.
 
-- **HTML** - Description here
-- **CSS** - Description here
-- **React** - Description here
-- **Service** - Description here
-- **DB/Login** - Description here
-- **WebSocket** - Description here
+- **HTML** - Design of three pages, login, feed/comments, and creating a post. This will create the structure of the site. Also, navigation allowed between "feed/comments page" and "creating a post" page. Creates a "like" button icon. Also, holds text and titles. 
+- **CSS** - Make the page look good through coloration and text sizing.
+- **React** - Submit comments/gifs and stories and allows the "like" button to be used.
+- **Service** - Allowing users to login.
+              - gets gifs from an external api
+              - retreive storis and comments and like counts from database.
+              - adding stories and comments and like counts to database.
+- **DB/Login** - Stores users and passwords. Database stores stories, comments and likes, and which go to what story
+- **WebSocket** - instant updates of the "like" button.
+
 
 ## 🚀 AWS deliverable
 

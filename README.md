@@ -77,14 +77,14 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
 - [x] **HTML pages** - Created a login, index (storeis and comments), and a writeStory page.
-- [x] **Proper HTML element usage** - Used header, nav, div, body and section
-- [ ] **Links** - I did not complete this part of the deliverable.
-- [ ] **Text** - I did not complete this part of the deliverable.
-- [ ] **3rd party API placeholder** - I did not complete this part of the deliverable.
-- [ ] **Images** - I did not complete this part of the deliverable.
-- [ ] **Login placeholder** - I did not complete this part of the deliverable.
-- [ ] **DB data placeholder** - I did not complete this part of the deliverable.
-- [ ] **WebSocket placeholder** - I did not complete this part of the deliverable.
+- [x] **Proper HTML element usage** - Used header, nav, div, body and section. Included html and head tag. All pages implement html elemnts to create the page.
+- [x] **Links** - navigation links in header, login button navigates to homepage. Also a github link
+- [x] **Text** - Text is used for labeling across the website
+- [x] **3rd party API placeholder** - comment shows where this goes in the index page
+- [x] **Images** - small images are included next the website title in the index page and login page. One is also included next to some top text in the writeStory page.
+- [x] **Login placeholder** - this is created with html. there is a username and password field along with a submit button. This serves as a placeholder as it has not been fully implemented yet, but it does navigate to the index page.
+- [x] **DB data placeholder** - lorem ipsum is used to show where stories and comments would be. these come from the database. The number of likes is displayed next to the like button. Gif's id will be stored in the database and then refetched in the website. A Gif is shown.
+- [x] **WebSocket placeholder** - This is the like button and there is a comment identifying it as the websocket element.
 
 ## 🚀 CSS deliverable
 

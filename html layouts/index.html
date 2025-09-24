@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Story Forrest Home</title>
+    </head>
+<body>
+    <header>
+        <div> 
+            <a href="https://github.com/WillHolmes0/startup">Github Repository</a>
+            <h1>Story Forrest</h1>
+            <img src="/Images/TreeIcon.jpeg" width="30" alt="Tree Icon">
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="writeStory.html">Write</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="story-box">
+                <!--This would be retrieved from the database-->
+                <h4>Story 1</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu varius eros, eget tincidunt tellus. Cras
+            suscipit ex eget iaculis aliquet. Vivamus sit amet fringilla tellus. Vestibulum quis molestie nunc. Etiam at
+            odio sagittis, luctus erat at, laoreet libero. Aenean sapien velit, euismod a massa et, fermentum mattis nisi.
+            Integer efficitur ipsum ut sapien facilisis, at consequat nibh ultrices.</p>
+            </div>
+            <div>
+                <button>
+                    <img src="/Images/thumbs_up.png" height="30" alt="thumbs up icon"/>
+                    <!-- The "Like" button is the web socket -->
+                </button>
+            </div>
+            <h6>13</h6>
+            <button>
+                <img src="/Images/comment.png" height ="25" alt="comment icon"/>
+            </button>
+        </section>
+        <aside>
+            <section>
+                <h2>Comments</h2>
+                <!--Comments are retrieved from the database-->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu varius eros, eget tincidunt tellus. Cras
+                suscipit ex eget iaculis aliquet. Vivamus sit amet fringilla tellus. Vestibulum quis molestie nunc. Etiam at
+                odio sagittis, luctus erat at, laoreet libero. Aenean sapien velit, euismod a massa et, fermentum mattis nisi.
+                Integer efficitur ipsum ut sapien facilisis, at consequat nibh ultrices.</p>
+            </section>
+            <section>
+                <h3>Comment</h3>
+                <div>
+                    <button>Type Comment</button>
+                    <button>GIF</button>
+                </div>
+                <div>
+                    <form>
+                        <textarea placeholder="Enter a Comment"></textarea>
+                        <button type="submit">Post</button>
+                    </form>
+                </div>
+                <div>
+                    <!--Area to select a GIF-->
+                    <!--THIS IS THE 3RD PARTY CALL-->
+                    <form></form>
+                    <button>Post</button>
+                </div>
+            </section>
+        </aside>
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>

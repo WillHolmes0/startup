@@ -76,6 +76,8 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
+Changes - Added images the Images file and all three html pages to html layouts.
+
 - [x] **HTML pages** - Created a login, index (storeis and comments), and a writeStory page.
 - [x] **Proper HTML element usage** - Used header, nav, div, body and section. Included html and head tag. All pages implement html elemnts to create the page.
 - [x] **Links** - navigation links in header, login button navigates to homepage. Also a github link

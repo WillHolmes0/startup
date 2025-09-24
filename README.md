@@ -79,7 +79,7 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 Changes - Added images the Images file and all three html pages to html layouts.
 
 - [x] **HTML pages** - Created a login, index (storeis and comments), and a writeStory page.
-- [x] **Proper HTML element usage** - Used header, nav, div, body and section. Included html and head tag. All pages implement html elemnts to create the page.
+- [x] **Proper HTML element usage** - Used header, nav, div, body and section. Included html and head tag. All pages implement html elemnts to create the page. footer was used, but is currently empty in all pages.
 - [x] **Links** - navigation links in header, login button navigates to homepage. Also a github link
 - [x] **Text** - Text is used for labeling across the website
 - [x] **3rd party API placeholder** - comment shows where this goes in the index page

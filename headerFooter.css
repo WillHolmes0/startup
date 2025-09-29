@@ -1,0 +1,51 @@
+header {
+    display: flex;
+    flex-direction: column;
+    background-color: tan;
+    flex: 1;
+    justify-content: center;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 1.1rem;
+    padding-bottom: 7px;
+}
+
+.navigation * {
+    color: black;
+    background-color: rgb(190, 170, 120);
+    text-decoration: none;
+}
+
+footer {
+    display: flex;
+    flex: 1;
+    background-color: tan;
+}
+
+.git-repo-link {
+    display: flex;
+    flex-direction: row;
+    padding-left: 15px;
+    align-items: center;
+    gap: 10px;
+}
+
+.git-repo-link * {
+    display: flex;
+    margin: 0;
+}
+

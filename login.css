@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(/Images/forrest.jpeg);
+    background-position: center;
+}
+
+main {
+    display: flex;
+    flex: 10;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-window {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(210, 180, 140, .85);
+    height: 50%;
+    width: 50%;
+}
+
+.login-box {
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family:'Trebuchet MS', sans-serif;
+}
+
+.login-text {
+    font-size: 1.2rem;
+}
+
+input {
+    margin: 1%;
+}
+
+.login-field {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    
+}
+
+.login-field * {
+    align-items: flex-end;
+    padding: 5px
+}
+
+.login-button {
+    margin: 5px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.1rem;
+}
+
+.login-button button{
+    background-color: rgb(190, 170, 120);
+}
+
+

@@ -34,6 +34,7 @@ footer {
     display: flex;
     flex: 1;
     background-color: tan;
+    font-family: 'Trebuchet MS', sans-serif;
 }
 
 .git-repo-link {

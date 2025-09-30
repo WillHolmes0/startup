@@ -1,0 +1,71 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(/Images/forrest.jpeg);
+    background-position: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Trebuchet MS', serif;
+    flex: 10;
+    overflow-y: auto;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.center-container {
+    margin: 30px;
+    align-items: center;
+    height: 100%;
+    width: 70%;
+    background-image: url(Images/Scroll_Plain.jpeg);
+    overflow-y: auto;
+} 
+
+.center-container > * {
+    margin: 2em;
+}
+
+.write-page-subtitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.title-box {
+    margin-bottom: 30px;
+}
+
+.summary-and-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.summary-label {
+    flex: 2;
+}
+
+.post-story-button {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    font-size: 1.2em;
+
+}
+
+.post-story-button button {
+    width: 150px;
+    background-color: gold;
+}
+
+.write-page-subtitle h2 {
+    font-size: 2.3em;
+}

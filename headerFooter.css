@@ -7,11 +7,26 @@ header {
     font-family: 'Trebuchet MS', sans-serif;
 }
 
+.title-and-name {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.name {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.name p {
+    padding: 7px;
+}
+
 .title {
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 20px;
+    width: 100%;
     padding-top: 15px;
     padding-bottom: 5px;
 }
@@ -49,6 +64,7 @@ footer {
     display: flex;
     margin: 0;
 }
+
 
 @media (max-height: 550px) {
     header {

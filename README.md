@@ -92,12 +92,17 @@ Changes - Added images the Images file and all three html pages to html layouts.
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Header, footer, and main content body** - I did not complete this part of the deliverable.
-- [ ] **Navigation elements** - I did not complete this part of the deliverable.
-- [ ] **Responsive to window resizing** - I did not complete this part of the deliverable.
-- [ ] **Application elements** - I did not complete this part of the deliverable.
-- [ ] **Application text content** - I did not complete this part of the deliverable.
-- [ ] **Application images** - I did not complete this part of the deliverable.
+
+I have 4 css files, one for each page and a headerFooter file that is used in every page.
+
+- [x] **Header, footer, and main content body** - Header with title and navigation. footer with github repo link. Universal across all three pages.
+    - index.html - login area
+    - home.html - scrollable main area for storys. Sidebar with three section for comments. Top is to read other people's comments, below that is navigation for going between writing a comment or posting a gif. below is the writing comment section. below that and extremely tiny is the gif area. All that is there is a post button and some text. The comment sidebar is super squished because I will have navigation to change what the comment sidebar displays. NOTE: because not all elements in the comment section are complete, like the switchable display and the gif 3rd party call are not yet present, some css for those elements was left unfinished as the css would be easier to do after those elemnts are made. 
+- [x] **Navigation elements** - colored and styled buttons for comment navigation. colored buttons for page navigation. 
+- [x] **Responsive to window resizing** - minor functionality. There are only two @media sections for this part. One gets rid of the header and footer under a certain height and the other gets rid of the comment section. They are in headerFooter.css and home.css respectively. no other elements were specifically designed to be resized. 
+- [x] **Application elements** - There is a lot of css in this program, but the bulk of the elements are text and div elements due to the nature of this website. There are colored s with opacity to see thorugh them in login and the large window in home. All elements in the pages are organized. gif in comment section is appropriately sized. text areas in the comment section and write story page are appropriately sized. padding on various elements and using "gap:" helps with asthetic. flex columns are everywhere. rows are used for comment and like buttons, as well as possibly other places. 
+- [x] **Application text content** - all text font changed to trebuchet MS. Some manual font resizing as well in random elements. labels are appropriately positioned.
+- [x] **Application images** - background image is a forrest. a parchement image is used for the comment and writestory areas. There is also a small picture next to the site title in the header and a quill picture near a header in writeStory.css. 
 
 ## 🚀 React part 1: Routing deliverable
 

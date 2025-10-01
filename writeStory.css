@@ -69,3 +69,8 @@ main {
 .write-page-subtitle h2 {
     font-size: 2.3em;
 }
+
+textarea {
+    width: 100%;
+    height: 350px;
+}

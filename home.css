@@ -75,14 +75,26 @@ aside {
     padding: 15px;
 }
 
-.comment-section h3{
+.comment-section {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+.comment-section-title{
     text-decoration: underline;
     padding-bottom: 5px;
+}
+
+.scrollable {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
 }
 
 .create-comment-section {
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
 }
 
 .create-comment-section h3 {
@@ -106,6 +118,11 @@ aside {
     flex-direction: column;
     gap: 15px;
     margin-top: 30px;
+}
+
+.col-flex {
+    display: flex;
+    flex-direction: column;
 }
 
 .typed-comment button{
@@ -137,4 +154,9 @@ aside {
 .comment-navigation button * {
     margin: 0;
     padding: 5px;
+}
+
+.sized-gif {
+    width: 70%;
+    height: auto;
 }

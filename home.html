@@ -100,18 +100,19 @@
                 </button>
             </nav>
             <section class="comment-section">
-                <h3>Comments</h>
-                <!--Comments are retrieved from the database-->
-                <div class="comment">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu varius eros, eget tincidunt tellus. Cras
-                    suscipit ex eget iaculis aliquet. Vivamus sit amet fringilla tellus. Vestibulum quis molestie nunc. Etiam at
-                    odio sagittis, luctus erat at, laoreet libero. Aenean sapien velit, euismod a massa et, fermentum mattis nisi.
-                    Integer efficitur ipsum ut sapien facilisis, at consequat nibh ultrices.</p>
-                </div>
-                <div class="comment">
-                    <!--gifs id will be stored in the database then refetched from the 3rd party when displaying in the comments-->
-                    <!-- <img src="/Images/Jujutsu Kaisen Jjk GIF by Xbox.gif" width="150"> -->
-                    <p>(gifs id will be stored in the database then refetched from the 3rd party when displaying in the comments)</p>
+                <h3 class="comment-section-title">Comments</h3>
+                <div class="scrollable">
+                    <!--Comments are retrieved from the database-->
+                    <div class="comment">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu varius eros, eget tincidunt tellus. Cras
+                        suscipit ex eget iaculis aliquet. Vivamus sit amet fringilla tellus. Vestibulum quis molestie nunc. Etiam at
+                        odio sagittis, luctus erat at, laoreet libero. Aenean sapien velit, euismod a massa et, fermentum mattis nisi.
+                        Integer efficitur ipsum ut sapien facilisis, at consequat nibh ultrices.</p>
+                    </div>
+                    <div class="comment">
+                        <!--gifs id will be stored in the database then refetched from the 3rd party when displaying in the comments-->
+                        <img src="/Images/Jujutsu Kaisen Jjk GIF by Xbox.gif" class="sized-gif">
+                    </div>
                 </div>
             </section>
             <section class="create-comment-section">
@@ -124,20 +125,28 @@
                         <p>GIF</p>
                     </button>
                 </div>
-                <form>
-                    <div class="typed-comment">
-                        <button type="submit">Post</button>
-                        <textarea placeholder="Enter a Comment" rows="10" cols="33"></textarea>
-                    </div>
-                </form>
-                <form>
-                    <div class="gif-comment">
-                        <button>Post</button>
-                        <!--Area to select a GIF-->
-                        <!--THIS IS THE 3RD PARTY CALL-->
-                        <p>GIF selection</p>
-                    </div>
-                </form>
+                <section class="scrollable">
+                    <form>
+                        <div class="typed-comment">
+                            <button type="submit">Post</button>
+                            <div>
+                                <textarea placeholder="Enter a Comment" rows="10" cols="33"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+                <section class="scrollable">
+                    <form>
+                        <div class="gif-comment">
+                            <button>Post</button>
+                            <div class="comment-content-box">
+                                <!--Area to select a GIF-->
+                                <!--THIS IS THE 3RD PARTY CALL-->
+                                <p>GIF selection</p>
+                            </div>
+                        </div>
+                    </form>
+                </section>
             </section>
         </aside>
     </main>

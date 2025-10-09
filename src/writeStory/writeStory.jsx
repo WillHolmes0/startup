@@ -6,7 +6,7 @@ export function WriteStory() {
     <main className="write-story-main">
         <div className="write-story-center-container">
             <div className="write-story-subheader">
-                <img src="../../public/Quill.png" width="50" alt="Quill icon"/>
+                <img src="Quill.png" width="50" alt="Quill icon"/>
                 <h2>Create Your Story!</h2>
             </div>
             <div>

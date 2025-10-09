@@ -16,13 +16,13 @@ export function Feed() {
                     <div className="feed-story-likes-comments">
                         <div className="feed-like-section">
                             <button>
-                                <img src="../../public/thumbs_up.png" height="30" alt="thumbs up icon"/>
+                                <img src="thumbs_up.png" height="30" alt="thumbs up icon"/>
                                 {/* The "Like" button here is the web socket */}
                             </button>
                             <h4>13</h4>
                         </div>
                         <button className="feed-comment-button">
-                            <img src="../../public/comment.png" height ="25" alt="comment icon"/>
+                            <img src="comment.png" height ="25" alt="comment icon"/>
                         </button>
                     </div>
                 </div>
@@ -36,13 +36,13 @@ export function Feed() {
                     <div className="feed-story-likes-comments">
                         <div className="feed-like-section">
                             <button>
-                                <img src="../../public/thumbs_up.png" height="30" alt="thumbs up icon"/>
+                                <img src="thumbs_up.png" height="30" alt="thumbs up icon"/>
                                 {/* The "Like" button here is the web socket */}
                             </button>
                             <h4>13</h4>
                         </div>
                         <button className="feed-comment-button">
-                            <img src="../../public/comment.png" height ="25" alt="comment icon"/>
+                            <img src="comment.png" height ="25" alt="comment icon"/>
                         </button>
                     </div>
                 </div>
@@ -56,13 +56,13 @@ export function Feed() {
                     <div className="feed-story-likes-comments">
                         <div className="feed-like-section">
                             <button>
-                                <img src="../../public/thumbs_up.png" height="30" alt="thumbs up icon"/>
+                                <img src="thumbs_up.png" height="30" alt="thumbs up icon"/>
                                 {/* The "Like" button here is the web socket */}
                             </button>
                             <h4>13</h4>
                         </div>
                         <button className="feed-comment-button">
-                            <img src="../../public/comment.png" height ="25" alt="comment icon"/>
+                            <img src="comment.png" height ="25" alt="comment icon"/>
                         </button>
                     </div>
                 </div>
@@ -89,7 +89,7 @@ export function Feed() {
                     </div>
                     <div className="feed-comment">
                         {/* gifs id will be stored in the database then refetched from the 3rd party when displaying in the comments */}
-                        <img src="../../public/Jujutsu Kaisen Jjk GIF by Xbox.gif" className="sized-gif"/>
+                        <img src="Jujutsu Kaisen Jjk GIF by Xbox.gif" className="sized-gif"/>
                     </div>
                 </div>
             </section>

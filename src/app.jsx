@@ -18,7 +18,7 @@ export default function App() {
                         </div>
                         <div className="title">
                             <h1>Story Forrest</h1>
-                            <img src="../public/TreeIcon.jpeg" height="50" alt="Tree Icon"/>
+                            <img src="TreeIcon.jpeg" height="50" alt="Tree Icon"/>
                         </div>
                     </div>
                     <nav className="navigation">

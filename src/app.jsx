@@ -2,6 +2,11 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
 
+import { BrowserRouter, NavLiNk, Route, Routes } from 'react-router-dom';
+import { Login } from './login/login';
+import { Feed } from './feed/feed';
+import { WriteStory } from './writeStory/writeStory';
+
 export default function App() {
     return (
         <div className="body">

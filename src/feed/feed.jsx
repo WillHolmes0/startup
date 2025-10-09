@@ -89,7 +89,7 @@ export function Feed() {
                     </div>
                     <div className="feed-comment">
                         {/* gifs id will be stored in the database then refetched from the 3rd party when displaying in the comments */}
-                        <img src="Jujutsu Kaisen Jjk GIF by Xbox.gif" className="sized-gif"/>
+                        <img src="Jujutsu Kaisen Jjk GIF by Xbox.gif" className="feed-sized-gif"/>
                     </div>
                 </div>
             </section>

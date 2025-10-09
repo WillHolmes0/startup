@@ -95,6 +95,12 @@
     text-decoration: underline;
 }
 
+.feed-comment-option-select {
+    display: flex;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
 .feed-comment-option-select button {
     border-radius: 5px;
     background-color: rgb(200, 180, 130);
@@ -138,7 +144,9 @@
 }
 
 .feed-comment-navigation {
+    display: flex;
     margin-bottom: 10px;
+    gap: 10px;
 }
 
 .feed-comment-navigation button {

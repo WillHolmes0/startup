@@ -3,64 +3,64 @@ import React from 'react';
 export function Feed() {
   return (
     <main>
-        <section class="primary-section">
-            <div class="feed-box">
-                <div class="story-box">
+        <section className="primary-section">
+            <div className="feed-box">
+                <div className="story-box">
                     {/* This would be retrieved from the database */}
                     <h4>Story 1</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu varius eros, eget tincidunt tellus. Cras
                 suscipit ex eget iaculis aliquet. Vivamus sit amet fringilla tellus. Vestibulum quis molestie nunc. Etiam at
                 odio sagittis, luctus erat at, laoreet libero. Aenean sapien velit, euismod a massa et, fermentum mattis nisi.
                 Integer efficitur ipsum ut sapien facilisis, at consequat nibh ultrices.</p>
-                    <div class="story-likes-comments">
-                        <div class="like-section">
+                    <div className="story-likes-comments">
+                        <div className="like-section">
                             <button>
                                 <img src="/Images/thumbs_up.png" height="30" alt="thumbs up icon"/>
                                 {/* The "Like" button here is the web socket */}
                             </button>
                             <h4>13</h4>
                         </div>
-                        <button class="comment-button">
+                        <button className="comment-button">
                             <img src="/Images/comment.png" height ="25" alt="comment icon"/>
                         </button>
                     </div>
                 </div>
-                <div class="story-box">
+                <div className="story-box">
                     {/* <This would be retrieved from the database */}
                     <h4>Story 1</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu varius eros, eget tincidunt tellus. Cras
                 suscipit ex eget iaculis aliquet. Vivamus sit amet fringilla tellus. Vestibulum quis molestie nunc. Etiam at
                 odio sagittis, luctus erat at, laoreet libero. Aenean sapien velit, euismod a massa et, fermentum mattis nisi.
                 Integer efficitur ipsum ut sapien facilisis, at consequat nibh ultrices.</p>
-                    <div class="story-likes-comments">
-                        <div class="like-section">
+                    <div className="story-likes-comments">
+                        <div className="like-section">
                             <button>
                                 <img src="/Images/thumbs_up.png" height="30" alt="thumbs up icon"/>
                                 {/* The "Like" button here is the web socket */}
                             </button>
                             <h4>13</h4>
                         </div>
-                        <button class="comment-button">
+                        <button className="comment-button">
                             <img src="/Images/comment.png" height ="25" alt="comment icon"/>
                         </button>
                     </div>
                 </div>
-                <div class="story-box">
+                <div className="story-box">
                     {/* This would be retrieved from the database */}
                     <h4>Story 1</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu varius eros, eget tincidunt tellus. Cras
                 suscipit ex eget iaculis aliquet. Vivamus sit amet fringilla tellus. Vestibulum quis molestie nunc. Etiam at
                 odio sagittis, luctus erat at, laoreet libero. Aenean sapien velit, euismod a massa et, fermentum mattis nisi.
                 Integer efficitur ipsum ut sapien facilisis, at consequat nibh ultrices.</p>
-                    <div class="story-likes-comments">
-                        <div class="like-section">
+                    <div className="story-likes-comments">
+                        <div className="like-section">
                             <button>
                                 <img src="/Images/thumbs_up.png" height="30" alt="thumbs up icon"/>
                                 {/* The "Like" button here is the web socket */}
                             </button>
                             <h4>13</h4>
                         </div>
-                        <button class="comment-button">
+                        <button className="comment-button">
                             <img src="/Images/comment.png" height ="25" alt="comment icon"/>
                         </button>
                     </div>
@@ -68,7 +68,7 @@ export function Feed() {
             </div>
         </section>
         <aside>
-            <nav class="comment-navigation">
+            <nav className="comment-navigation">
                 <button>
                     <h5>View Comments</h5>
                 </button>
@@ -76,25 +76,25 @@ export function Feed() {
                     <h5>Write Comment</h5>
                 </button>
             </nav>
-            <section class="comment-section">
-                <h3 class="comment-section-title">Comments</h3>
-                <div class="scrollable">
+            <section className="comment-section">
+                <h3 className="comment-section-title">Comments</h3>
+                <div className="scrollable">
                     {/* Comments are retrieved from the database */}
-                    <div class="comment">
+                    <div className="comment">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu varius eros, eget tincidunt tellus. Cras
                         suscipit ex eget iaculis aliquet. Vivamus sit amet fringilla tellus. Vestibulum quis molestie nunc. Etiam at
                         odio sagittis, luctus erat at, laoreet libero. Aenean sapien velit, euismod a massa et, fermentum mattis nisi.
                         Integer efficitur ipsum ut sapien facilisis, at consequat nibh ultrices.</p>
                     </div>
-                    <div class="comment">
+                    <div className="comment">
                         {/* gifs id will be stored in the database then refetched from the 3rd party when displaying in the comments */}
-                        <img src="/Images/Jujutsu Kaisen Jjk GIF by Xbox.gif" class="sized-gif"/>
+                        <img src="/Images/Jujutsu Kaisen Jjk GIF by Xbox.gif" className="sized-gif"/>
                     </div>
                 </div>
             </section>
-            <section class="create-comment-section">
+            <section className="create-comment-section">
                 <h3>Add a Comment</h3>
-                <div class="comment-option-select">
+                <div className="comment-option-select">
                     <button>
                         <p>Type Comment</p>
                     </button>
@@ -102,9 +102,9 @@ export function Feed() {
                         <p>GIF</p>
                     </button>
                 </div>
-                <section class="scrollable">
+                <section className="scrollable">
                     <form>
-                        <div class="typed-comment">
+                        <div className="typed-comment">
                             <button type="submit">Post</button>
                             <div>
                                 <textarea placeholder="Enter a Comment"></textarea>
@@ -112,11 +112,11 @@ export function Feed() {
                         </div>
                     </form>
                 </section>
-                <section class="scrollable">
+                <section className="scrollable">
                     <form>
-                        <div class="gif-comment">
+                        <div className="gif-comment">
                             <button>Post</button>
-                            <div class="comment-content-box">
+                            <div className="comment-content-box">
                                 {/* Area to select a GIF */}
                                 {/* THIS IS THE 3RD PARTY CALL */}
                                 <p>GIF selection</p>

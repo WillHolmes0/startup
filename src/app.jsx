@@ -12,16 +12,16 @@ export default function App() {
         <BrowserRouter>
             <div className="body">
                 <header>
-                    <div class="title-and-name">
-                        <div class="name">
+                    <div className="title-and-name">
+                        <div className="name">
                             <p>William Holmes</p>
                         </div>
-                        <div class="title">
+                        <div className="title">
                             <h1>Story Forrest</h1>
                             <img src="/Images/TreeIcon.jpeg" height="50" alt="Tree Icon"/>
                         </div>
                     </div>
-                    <nav class="navigation">
+                    <nav className="navigation">
                         <button> 
                             <NavLink to='/'>Login</NavLink>
                         </button>
@@ -29,7 +29,7 @@ export default function App() {
                             <NavLink to='feed'>Feed</NavLink>
                         </button>
                         <button> 
-                            <NavLink to='writeStory'>Feed</NavLink>
+                            <NavLink to='writeStory'>Write</NavLink>
                         </button>
                     </nav>
                 </header>
@@ -42,7 +42,7 @@ export default function App() {
                 </Routes>
                 
                 <footer>
-                    <div class="git-repo-link">
+                    <div className="git-repo-link">
                         <p>See the source Code: </p>
                         <a href="https://github.com/WillHolmes0/startup">Github Repository</a>
                     </div>
@@ -54,7 +54,7 @@ export default function App() {
 
 function NotFound() {
     return (
-        <main class="centered-text">
+        <main className="centered-text">
             <h2>404: Page not found.</h2>
         </main>
     );

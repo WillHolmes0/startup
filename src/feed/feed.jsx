@@ -1,0 +1,131 @@
+import React from 'react';
+
+export function Feed() {
+  return (
+    <main>
+        <section class="primary-section">
+            <div class="feed-box">
+                <div class="story-box">
+                    {/* This would be retrieved from the database */}
+                    <h4>Story 1</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu varius eros, eget tincidunt tellus. Cras
+                suscipit ex eget iaculis aliquet. Vivamus sit amet fringilla tellus. Vestibulum quis molestie nunc. Etiam at
+                odio sagittis, luctus erat at, laoreet libero. Aenean sapien velit, euismod a massa et, fermentum mattis nisi.
+                Integer efficitur ipsum ut sapien facilisis, at consequat nibh ultrices.</p>
+                    <div class="story-likes-comments">
+                        <div class="like-section">
+                            <button>
+                                <img src="/Images/thumbs_up.png" height="30" alt="thumbs up icon"/>
+                                {/* The "Like" button here is the web socket */}
+                            </button>
+                            <h4>13</h4>
+                        </div>
+                        <button class="comment-button">
+                            <img src="/Images/comment.png" height ="25" alt="comment icon"/>
+                        </button>
+                    </div>
+                </div>
+                <div class="story-box">
+                    {/* <This would be retrieved from the database */}
+                    <h4>Story 1</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu varius eros, eget tincidunt tellus. Cras
+                suscipit ex eget iaculis aliquet. Vivamus sit amet fringilla tellus. Vestibulum quis molestie nunc. Etiam at
+                odio sagittis, luctus erat at, laoreet libero. Aenean sapien velit, euismod a massa et, fermentum mattis nisi.
+                Integer efficitur ipsum ut sapien facilisis, at consequat nibh ultrices.</p>
+                    <div class="story-likes-comments">
+                        <div class="like-section">
+                            <button>
+                                <img src="/Images/thumbs_up.png" height="30" alt="thumbs up icon"/>
+                                {/* The "Like" button here is the web socket */}
+                            </button>
+                            <h4>13</h4>
+                        </div>
+                        <button class="comment-button">
+                            <img src="/Images/comment.png" height ="25" alt="comment icon"/>
+                        </button>
+                    </div>
+                </div>
+                <div class="story-box">
+                    {/* This would be retrieved from the database */}
+                    <h4>Story 1</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu varius eros, eget tincidunt tellus. Cras
+                suscipit ex eget iaculis aliquet. Vivamus sit amet fringilla tellus. Vestibulum quis molestie nunc. Etiam at
+                odio sagittis, luctus erat at, laoreet libero. Aenean sapien velit, euismod a massa et, fermentum mattis nisi.
+                Integer efficitur ipsum ut sapien facilisis, at consequat nibh ultrices.</p>
+                    <div class="story-likes-comments">
+                        <div class="like-section">
+                            <button>
+                                <img src="/Images/thumbs_up.png" height="30" alt="thumbs up icon"/>
+                                {/* The "Like" button here is the web socket */}
+                            </button>
+                            <h4>13</h4>
+                        </div>
+                        <button class="comment-button">
+                            <img src="/Images/comment.png" height ="25" alt="comment icon"/>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <aside>
+            <nav class="comment-navigation">
+                <button>
+                    <h5>View Comments</h5>
+                </button>
+                <button>
+                    <h5>Write Comment</h5>
+                </button>
+            </nav>
+            <section class="comment-section">
+                <h3 class="comment-section-title">Comments</h3>
+                <div class="scrollable">
+                    {/* Comments are retrieved from the database */}
+                    <div class="comment">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu varius eros, eget tincidunt tellus. Cras
+                        suscipit ex eget iaculis aliquet. Vivamus sit amet fringilla tellus. Vestibulum quis molestie nunc. Etiam at
+                        odio sagittis, luctus erat at, laoreet libero. Aenean sapien velit, euismod a massa et, fermentum mattis nisi.
+                        Integer efficitur ipsum ut sapien facilisis, at consequat nibh ultrices.</p>
+                    </div>
+                    <div class="comment">
+                        {/* gifs id will be stored in the database then refetched from the 3rd party when displaying in the comments */}
+                        <img src="/Images/Jujutsu Kaisen Jjk GIF by Xbox.gif" class="sized-gif"/>
+                    </div>
+                </div>
+            </section>
+            <section class="create-comment-section">
+                <h3>Add a Comment</h3>
+                <div class="comment-option-select">
+                    <button>
+                        <p>Type Comment</p>
+                    </button>
+                    <button>
+                        <p>GIF</p>
+                    </button>
+                </div>
+                <section class="scrollable">
+                    <form>
+                        <div class="typed-comment">
+                            <button type="submit">Post</button>
+                            <div>
+                                <textarea placeholder="Enter a Comment"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+                <section class="scrollable">
+                    <form>
+                        <div class="gif-comment">
+                            <button>Post</button>
+                            <div class="comment-content-box">
+                                {/* Area to select a GIF */}
+                                {/* THIS IS THE 3RD PARTY CALL */}
+                                <p>GIF selection</p>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </section>
+        </aside>
+    </main>
+  );
+}

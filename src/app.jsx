@@ -54,7 +54,7 @@ export default function App() {
 
 function NotFound() {
     return (
-        <main className="centered-text">
+        <main className="centered-text white-background">
             <h2>404: Page not found.</h2>
         </main>
     );

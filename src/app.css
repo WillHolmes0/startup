@@ -90,6 +90,10 @@ footer {
     align-items: center;
 }
 
+.white-background {
+    background-color: white;
+}
+
 @media (max-height: 550px) {
     header {
         display: none;

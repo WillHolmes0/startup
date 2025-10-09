@@ -46,7 +46,11 @@
     margin: 0;
 }
 
-.feed-like-section button, .comment-button {
+.feed-like-section button {
+    border-radius: 10px;
+}
+
+.feed-comment-button {
     border-radius: 10px;
 }
 

@@ -84,6 +84,11 @@ footer {
     margin: 0;
 }
 
+.centered-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 @media (max-height: 550px) {
     header {

@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
 
-import { BrowserRouter, NavLiNk, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
 import { Login } from './login/login';
 import { Feed } from './feed/feed';
 import { WriteStory } from './writeStory/writeStory';
@@ -23,18 +23,23 @@ export default function App() {
                     </div>
                     <nav class="navigation">
                         <button> 
-                            <NavLink to='login'>Login</NavLink>
+                            <NavLink to='/'>Login</NavLink>
                         </button>
                         <button> 
                             <NavLink to='feed'>Feed</NavLink>
                         </button>
                         <button> 
-                            <NavLink to='feed'>Feed</NavLink>
+                            <NavLink to='writeStory'>Feed</NavLink>
                         </button>
                     </nav>
                 </header>
-                
-                <main> </main>
+
+                <Routes> 
+                    <Route path='/' element={<Login />} />
+                    <Route path='/feed' element={<Feed />} />
+                    <Route path='/writeStory' elemnt={<WriteStory />} />
+                    <Route path='*' element={<NotFound />} />
+                </Routes>
                 
                 <footer>
                     <div class="git-repo-link">
@@ -44,5 +49,13 @@ export default function App() {
                 </footer>
             </div>
         </BrowserRouter>
+    );
+}
+
+function NotFound() {
+    return (
+        <main class="centered-text">
+            <h2>404: Page not found.</h2>
+        </main>
     );
 }

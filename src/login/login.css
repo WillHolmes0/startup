@@ -1,8 +1,8 @@
-main {
+.login-main {
     flex-direction: column;
 }
 
-.center-window {
+.login-center-window {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,7 +22,7 @@ main {
     font-size: 1.2rem;
 }
 
-input {
+.login-input {
     margin: 1%;
 }
 

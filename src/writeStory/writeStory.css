@@ -1,43 +1,43 @@
-main {
+.write-story-main {
     flex-direction: column;
 }
 
-.center-container {
+.write-story-center-container {
     margin: 30px;
     align-items: center;
     height: 100%;
     width: 70%;
-    background-image: url(Images/Scroll_Plain.jpeg);
+    background-image: url(../../public/Scroll_Plain.jpeg);
     overflow-y: auto;
 } 
 
-.center-container > * {
+.write-story-center-container > * {
     margin: 2em;
 }
 
-.write-page-subtitle {
+.write-story-subheader {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 5px;
 }
 
-.title-box {
+.write-story-title-box {
     margin-bottom: 30px;
 }
 
-.summary-and-button {
+.write-story-summary-and-button {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-bottom: 10px;
 }
 
-.summary-label {
+.write-story-summary-label {
     flex: 2;
 }
 
-.post-story-button {
+.write-story-post-story-button {
     display: flex;
     flex: 1;
     justify-content: center;
@@ -45,16 +45,16 @@ main {
 
 }
 
-.post-story-button button {
+.write-story-post-story-button button {
     width: 150px;
     background-color: gold;
 }
 
-.write-page-subtitle h2 {
+.write-story-write-page-subtitle h2 {
     font-size: 2.3em;
 }
 
-textarea {
+.write-story-textarea {
     width: 100%;
     height: 350px;
 }

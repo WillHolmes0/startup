@@ -18,7 +18,7 @@ export default function App() {
                         </div>
                         <div className="title">
                             <h1>Story Forrest</h1>
-                            <img src="/Images/TreeIcon.jpeg" height="50" alt="Tree Icon"/>
+                            <img src="../public/TreeIcon.jpeg" height="50" alt="Tree Icon"/>
                         </div>
                     </div>
                     <nav className="navigation">
@@ -37,7 +37,7 @@ export default function App() {
                 <Routes> 
                     <Route path='/' element={<Login />} />
                     <Route path='/feed' element={<Feed />} />
-                    <Route path='/writeStory' elemnt={<WriteStory />} />
+                    <Route path='/writeStory' element={<WriteStory />} />
                     <Route path='*' element={<NotFound />} />
                 </Routes>
                 

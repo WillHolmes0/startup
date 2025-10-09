@@ -109,9 +109,9 @@ I have 4 css files, one for each page and a headerFooter file that is used in ev
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Bundled using Vite** - I did not complete this part of the deliverable.
-- [ ] **Components** - I did not complete this part of the deliverable.
-- [ ] **Router** - I did not complete this part of the deliverable.
+- [x] **Bundled using Vite** - did this
+- [x] **Components** - 3 differnet components in feed, login, and writestory folders. They are wraped in functions that can be called. 
+- [x] **Router** - Navlinks change sections of the app.jsx file to load 3 different urls
 
 ## 🚀 React part 2: Reactivity deliverable
 

@@ -8,6 +8,7 @@ import { Feed } from './feed/feed';
 import { WriteStory } from './writeStory/writeStory';
 
 export default function App() {
+
     return (
         <BrowserRouter>
             <div className="body">

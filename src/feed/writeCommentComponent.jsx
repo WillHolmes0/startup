@@ -1,15 +1,27 @@
 import React from 'react';
 import './feed.css';
 
-export function WriteCommentComponent({visible}) {
-    if (visible) {
+export function WriteCommentComponent(props) {
+    let story = JSON.parse(localStorage.getItem(props.storyID))
+    let text = '';
+
+    function postComment() {
+        story.comments.push(text);
+        localStorage.setItem(props.storyID, JSON.stringify(story));
+    }
+
+    function setContent(e) {
+        text = e.target.value;
+    }
+
+    if (props.visible) {
         return (
             <section className="feed-scrollable">
                 <form>
                     <div className="feed-typed-comment">
-                        <button type="feed-submit">Post</button>
+                        <button onClick={postComment} type="feed-submit">Post</button>
                         <div>
-                            <textarea className="feed-textarea" placeholder="Enter a Comment"></textarea>
+                            <textarea onChange={setContent} className="feed-textarea" placeholder="Enter a Comment"></textarea>
                         </div>
                     </div>
                 </form>

@@ -1,20 +1,23 @@
 import './feed.css';
 import React from 'react';
 
-  export function ViewCommentsComponent({visible}) {
-    console.log("called function");
-    if (visible) {
+  export function ViewCommentsComponent(props) {
+    const story = JSON.parse(localStorage.getItem(props.storyID));
+    
+    function showStoryComments() {
+        const comments = [];
+        for (let i = 0; i < story.comments.length; i++) {
+            comments.push(<li className="feed-comment">{story.comments[i]}</li>);
+        }
+        return comments;
+    }
+
+    if (props.visible) {
         return (
             <section className="feed-comment-section">
                 <h3 className="feed-comment-section-title">Comments</h3>
                 <div className="feed-scrollable">
-                    {/* Comments are retrieved from the database */}
-                    <div className="feed-comment">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu varius eros, eget tincidunt tellus. Cras
-                        suscipit ex eget iaculis aliquet. Vivamus sit amet fringilla tellus. Vestibulum quis molestie nunc. Etiam at
-                        odio sagittis, luctus erat at, laoreet libero. Aenean sapien velit, euismod a massa et, fermentum mattis nisi.
-                        Integer efficitur ipsum ut sapien facilisis, at consequat nibh ultrices.</p>
-                    </div>
+                    {showStoryComments()}
                     <div className="feed-comment">
                         {/* gifs id will be stored in the database then refetched from the 3rd party when displaying in the comments */}
                         <img src="Jujutsu Kaisen Jjk GIF by Xbox.gif" className="feed-sized-gif"/>

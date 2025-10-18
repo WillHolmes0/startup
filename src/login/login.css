@@ -40,9 +40,11 @@
 
 .login-button {
     margin: 5px;
+    margin-right: 2.9px;
     display: flex;
     justify-content: flex-end;
     font-size: 1.1rem;
+    gap: 20px;
 }
 
 .login-button button{

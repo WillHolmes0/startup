@@ -2,14 +2,16 @@ import './feed.css';
 import React from 'react';
 
   export function ViewCommentsComponent(props) {
-    const story = JSON.parse(localStorage.getItem(props.storyID));
+    const story = JSON.parse(localStorage.getItem(props.storyID) || null);
     
     function showStoryComments() {
-        const comments = [];
-        for (let i = 0; i < story.comments.length; i++) {
-            comments.push(<li className="feed-comment">{story.comments[i]}</li>);
-        }
-        return comments;
+        if (story != null) {
+            const comments = [];
+            for (let i = 0; i < story.comments.length; i++) {
+                comments.push(<li className="feed-comment">{story.comments[i]}</li>);
+            }
+            return comments;
+        }   
     }
 
     if (props.visible) {

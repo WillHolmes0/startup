@@ -8,6 +8,30 @@ import { Feed } from './feed/feed';
 import { WriteStory } from './writeStory/writeStory';
 
 export default function App() {
+    const users = JSON.parse(localStorage.getItem('users') || '[]');
+    const [currentUser, setCurrentUser] = React.useState();
+
+    function navigation() {
+        console.log(currentUser);
+        if (currentUser != null) {
+            return (
+                <nav className="navigation">
+                    <button> 
+                        <NavLink to='/'>Login</NavLink>
+                    </button>
+                    <button> 
+                        <NavLink to='feed'>Feed</NavLink>
+                    </button>
+                    <button> 
+                        <NavLink to='writeStory'>Write</NavLink>
+                    </button>
+                </nav>
+            );
+        }
+        return (
+            <nav className="navigation"></nav>
+        );
+    }
 
     return (
         <BrowserRouter>
@@ -22,21 +46,11 @@ export default function App() {
                             <img src="TreeIcon.jpeg" height="50" alt="Tree Icon"/>
                         </div>
                     </div>
-                    <nav className="navigation">
-                        <button> 
-                            <NavLink to='/'>Login</NavLink>
-                        </button>
-                        <button> 
-                            <NavLink to='feed'>Feed</NavLink>
-                        </button>
-                        <button> 
-                            <NavLink to='writeStory'>Write</NavLink>
-                        </button>
-                    </nav>
+                    {navigation()}
                 </header>
 
                 <Routes> 
-                    <Route path='/' element={<Login />} />
+                    <Route path='/' element={<Login setCurrentUser={setCurrentUser}/>} />
                     <Route path='/feed' element={<Feed />} />
                     <Route path='/writeStory' element={<WriteStory />} />
                     <Route path='*' element={<NotFound />} />

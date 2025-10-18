@@ -9,7 +9,7 @@ import { WriteStory } from './writeStory/writeStory';
 
 export default function App() {
     const users = JSON.parse(localStorage.getItem('users') || '[]');
-    const [currentUser, setCurrentUser] = React.useState();
+    const [currentUser, setCurrentUser] = React.useState(localStorage.getItem('currentUser'));
 
     function navigation() {
         console.log(currentUser);
@@ -33,6 +33,11 @@ export default function App() {
         );
     }
 
+    function updateCurrentUser(newUser) {
+        localStorage.setItem('currentUser', newUser);
+        setCurrentUser(newUser);
+    }
+
     return (
         <BrowserRouter>
             <div className="body">
@@ -50,7 +55,7 @@ export default function App() {
                 </header>
 
                 <Routes> 
-                    <Route path='/' element={<Login setCurrentUser={setCurrentUser}/>} />
+                    <Route path='/' element={<Login UpdateCurrentUser={updateCurrentUser}/>} />
                     <Route path='/feed' element={<Feed />} />
                     <Route path='/writeStory' element={<WriteStory />} />
                     <Route path='*' element={<NotFound />} />

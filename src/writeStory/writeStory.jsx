@@ -51,7 +51,7 @@ export function WriteStory() {
                     <h2>Create Your Story!</h2>
                 </div>
                 <div>
-                    <form>
+                    <div>
                         <div className="write-story-title-box">
                             <h2>Title</h2>
                             <input onChange={setTitle} type="text" placeholder="Enter your title"/>
@@ -65,7 +65,7 @@ export function WriteStory() {
                             </div>
                         </div>
                         <textarea onChange={setContent} className="write-story-textarea" placeholder="Enter a story summary or snippet"></textarea>
-                    </form>
+                    </div>
                 </div>
             </div>
         </main>

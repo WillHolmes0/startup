@@ -14,7 +14,7 @@ export function Login(props) {
         const users = getUsers();
         for (let i = 0; i < users.length; i++) {
             if (username == users[i].username && password == users[i].password) {
-                props.setCurrentUser(username);
+                props.UpdateCurrentUser(username);
                 console.log("sucess");
             }
         }
@@ -26,6 +26,7 @@ export function Login(props) {
             password: password
         };
         const users = getUsers();
+        users.push(user)
         localStorage.setItem('users', JSON.stringify(users));
     }
 

@@ -5,14 +5,14 @@ export function PostGifComponent({visible}) {
     if (visible) {
         return (
             <section className="feed-scrollable">
-                <form>
+                <div>
                     <div className="feed-gif-comment">
                         <button>Post</button>
                         <div className="feed-comment-content-box">
                             <p>This is the place for the 3rd party API call</p>
                         </div>
                     </div>
-                </form>
+                </div>
             </section>
         );
     }

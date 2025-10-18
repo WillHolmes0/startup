@@ -17,14 +17,14 @@ export function WriteCommentComponent(props) {
     if (props.visible) {
         return (
             <section className="feed-scrollable">
-                <form>
+                <div>
                     <div className="feed-typed-comment">
                         <button onClick={postComment} type="feed-submit">Post</button>
                         <div>
                             <textarea onChange={setContent} className="feed-textarea" placeholder="Enter a Comment"></textarea>
                         </div>
                     </div>
-                </form>
+                </div>
             </section>
         );
     }

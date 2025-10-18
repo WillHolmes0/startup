@@ -1,6 +1,7 @@
 import React from 'react';
 import './writeStory.css';
 import {getAllKeys} from '../dataAccess/localAccess.jsx';
+import {useEffect} from 'react';
 
 
 export function WriteStory() {

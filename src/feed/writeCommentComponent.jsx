@@ -6,8 +6,10 @@ export function WriteCommentComponent(props) {
     let text = '';
 
     function postComment() {
-        story.comments.push(text);
-        localStorage.setItem(props.storyID, JSON.stringify(story));
+        if (story) {
+            story.comments.push(text);
+            localStorage.setItem(props.storyID, JSON.stringify(story));
+        }
     }
 
     function setContent(e) {

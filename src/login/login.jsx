@@ -15,7 +15,6 @@ export function Login(props) {
         for (let i = 0; i < users.length; i++) {
             if (username == users[i].username && password == users[i].password) {
                 props.UpdateCurrentUser(username);
-                console.log("sucess");
             }
         }
     }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import './feed.css';
 import { ViewCommentsComponent } from './viewCommentsComponent.jsx';
 import { PostCommentSectionComponent } from './postCommentSectionComponent.jsx';
@@ -9,6 +10,22 @@ export function Feed() {
   const [viewCommentsVisibility, setViewCommentsVisibility] = React.useState(true);
   const [postCommentVisibility, setPostCommentVisibility] = React.useState(false);
   const [activeCommentsStoryID, setActiveCommentsStoryID] = React.useState(storyList[0]);
+
+  useEffect(() => {
+    if (storyList == null) {
+      console.log("storyList is null");
+    }
+    else if (storyList.length > 0) {
+      console.log("loaded stories: \n")
+      for (let i = 0; i < storyList.length; i++) {
+        console.log(`\t${storyList[i]}`);
+      }
+    } else if (storyList.length == 0) {
+      console.log("storyList is empty");
+    } else {
+      console.log("error with storyList");
+    }
+  }, [storyList]);
 
   function activateViewCommentsVisibility() {
     setViewCommentsVisibility(true);

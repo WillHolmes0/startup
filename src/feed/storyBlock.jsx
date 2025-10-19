@@ -1,5 +1,6 @@
 import React from 'react';
 import './feed.css';
+import { useEffect } from 'react';
 
 export function StoryBlock(props) {
 
@@ -15,7 +16,6 @@ export function StoryBlock(props) {
 
     function setStoryComments() {
         props.setActiveCommentsStoryID(props.storyID);
-        console.log(props.storyID);
     }
 
     return (

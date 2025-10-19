@@ -117,8 +117,16 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **All functionality implemented or mocked out** - I did not complete this part of the deliverable.
-- [ ] **Hooks** - I did not complete this part of the deliverable.
+Some information regarding the use of the website. 
+ - To login, enter any username and password, hit register, then hit login. The navigation should appear. 
+ - There are two other pages feed and writestory. You will need to create a story in writestory before you can do anything in the feed
+ - Once a story is created, it will appear in the feed. Select the comment icon to select the comments for that story. 
+ - In the comments pannel in the feed section, select post comment. then select either type comment or GIF to post a comment. 
+ - This comment should now be visible when clicking view comments.
+ - All data is stored in localstorage.
+
+- [x] **All functionality implemented or mocked out** - all features are implemented or mocked out except for the web hook.
+- [x] **Hooks** - React is used to select what to display in the side comments section. Specifically it allows for navigation between the different comment options. It also is used to highlight the selected gif in blue when posting a gif comment. Finally, it is used to restirct the navigation menu to be shown only when a user has succesfully logged in. 
 
 ## 🚀 Service deliverable
 

@@ -107,19 +107,12 @@
     background-color: rgb(200, 180, 130);
 }
 
-.feed-typed-comment {
+.feed-comment-input {
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
     gap: 15px;
-    margin-top: 30px;
-}
-
-.feed-gif-comment {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    gap: 15px;
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 .feed-col-flex {
@@ -127,16 +120,11 @@
     flex-direction: column;
 }
 
-.feed-typed-comment button{
+.post-comment-button{
     border-radius: 5px;
     background-color: gold;
     width: 30%;
-}
-
-.feed-gif-comment button{
-    border-radius: 5px;
-    background-color: gold;
-    width: 30%;
+    margin-top: 20px;
 }
 
 .feed-comment-option-select p {
@@ -165,6 +153,21 @@
     height: auto;
 }
 
+.feed-gif-option-selected {
+    width: 75%;
+    height: auto;
+    border: 3px solid blue;
+    margin-bottom: 20px;
+}
+
+.feed-gif-option-not-selected {
+    width: 75%;
+    height: auto;
+    border: none;
+    margin-bottom: 20px;
+
+}
+
 @media (max-width: 700px) {
     .feed-aside {
         display: none !important;
@@ -176,5 +179,5 @@
 
 .feed-textarea {
     width: 100%;
-    height: 500px;
+    height: 200px;
 }

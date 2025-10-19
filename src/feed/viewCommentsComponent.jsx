@@ -8,7 +8,14 @@ import React from 'react';
         if (story != null) {
             const comments = [];
             for (let i = 0; i < story.comments.length; i++) {
-                comments.push(<li className="feed-comment">{story.comments[i]}</li>);
+                let comment = story.comments[i];
+                if (comment.type == "text") {
+                    comments.push(<li className="feed-comment">{comment.content}</li>);
+                } else if (comment.type == "gif") {
+                    comments.push(<li className="feed-comment">{<img src={comment.content} className="feed-sized-gif"/>}</li>);
+                } else {
+                    console.log("error: unknown comment type.");
+                }
             }
             return comments;
         }   
@@ -20,10 +27,6 @@ import React from 'react';
                 <h3 className="feed-comment-section-title">Comments</h3>
                 <div className="feed-scrollable">
                     {showStoryComments()}
-                    <div className="feed-comment">
-                        {/* gifs id will be stored in the database then refetched from the 3rd party when displaying in the comments */}
-                        <img src="Jujutsu Kaisen Jjk GIF by Xbox.gif" className="feed-sized-gif"/>
-                    </div>
                 </div>
             </section>
         );

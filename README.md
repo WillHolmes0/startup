@@ -126,7 +126,7 @@ Some information regarding the use of the website.
  - All data is stored in localstorage.
 
 - [x] **All functionality implemented or mocked out** - all features are implemented or mocked out except for the web hook.
-- [x] **Hooks** - React is used to select what to display in the side comments section. Specifically it allows for navigation between the different comment options. It also is used to highlight the selected gif in blue when posting a gif comment. Finally, it is used to restirct the navigation menu to be shown only when a user has succesfully logged in. 
+- [x] **Hooks** - React.useState is used to select what to display in the side comments section. Specifically it allows for navigation between the different comment options. It also is used to highlight the selected gif in blue when posting a gif comment. Finally, it is used to restirct the navigation menu to be shown only when a user has succesfully logged in. I didn't have a great use for React.useEffect. I have a console messages for when a user is changed, and another console message showing the list of loaded stories in the feed tab. 
 
 ## 🚀 Service deliverable
 

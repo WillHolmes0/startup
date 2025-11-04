@@ -19,14 +19,27 @@ export function Login(props) {
         }
     }
 
-    function registerUser() {
-        const user = {
-            username: username,
-            password: password
-        };
-        const users = getUsers();
-        users.push(user)
-        localStorage.setItem('users', JSON.stringify(users));
+    async function registerUser() {
+        console.log("start");
+        // const user = {
+        //     username: username,
+        //     password: password
+        // };
+        // const users = getUsers();
+        // users.push(user)
+        // localStorage.setItem('users', JSON.stringify(users));
+
+        const res = await fetch('api/auth', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json'},
+            body: JSON.stringify({ username, password})
+        });
+        await res.json();
+        if (res.ok) {
+            console.log("sucess");
+        } else {
+            console.log("failure");
+        }
     }
 
     function getUsername(e) {

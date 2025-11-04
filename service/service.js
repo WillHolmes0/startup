@@ -22,6 +22,7 @@ app.post('/api/auth', async (req, res) => {
 });
 
 app.put('/api/auth', async (req, res) => {
+    console.log(req.body);
     const user = getUser('email', req.body.email);
     if (user && await bcrypt.compare(req.body.password, user.password)) {
         setAuthCookie(res, user);

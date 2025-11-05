@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 
 export function StoryBlock(props) {
 
-    let story = JSON.parse(localStorage.getItem(props.storyID) || 0);
+    let story = props.story;
     const [likeCount, setLikeCount] = React.useState(story.likes);
     
     function updateLikeCount() {

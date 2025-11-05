@@ -8,6 +8,8 @@ app.use(express.json());
 app.use(cookieParser())
 
 const users = [];
+const stories = {};
+const storyIDs = [];
 
 const port  = process.argv.length > 2 ? process.argv[2] : 3000;
 
@@ -50,6 +52,19 @@ app.get('/api/user/me', (req, res) => {
         res.status(401).send({msg: 'Unauthorized'});
     }
 });
+
+app.post('/api/stories', (req, res) => {
+    stories[req.body.idKey] = req.body.story;
+    storyIDs.push(req.body.idKey);
+    res.send({idKey: req.body.idKey});
+    console.log(storyIDs.length);
+});
+
+app.get('/api/stories', (req, res) => {
+    console.log("in endpoint");
+    res.send({storyIDs, stories});
+    console.log("endpoint send response");
+})
  
 app.listen(port, function () {
     console.log(`Listening on port ${port}`);

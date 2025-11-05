@@ -7,12 +7,12 @@ import {useEffect} from 'react';
 export function WriteStory() {
     const story = {};
 
-    function updateStoryIDs(storyID) {
-        const storyIDs = JSON.parse(localStorage.getItem('storyIDs') || '[]');
-        storyIDs.push(storyID);
-        localStorage.setItem('storyIDs', JSON.stringify(storyIDs));
-        return storyIDs;
-    }
+    // function updateStoryIDs(storyID) {
+    //     const storyIDs = JSON.parse(localStorage.getItem('storyIDs') || '[]');
+    //     storyIDs.push(storyID);
+    //     localStorage.setItem('storyIDs', JSON.stringify(storyIDs));
+    //     return storyIDs;
+    // }
 
     function generateID() {
         let idNumber = Math.round(Math.random() * 10000)
@@ -24,16 +24,18 @@ export function WriteStory() {
         return generateID();
     }
 
-    function setLikeAndCommentProperties() {
+    async function postStory() {
         story.likes = 0;
         story.comments = [];
-    }
-
-    function postStory() {
-        setLikeAndCommentProperties();
         let idKey = generateID();
-        localStorage.setItem(idKey, JSON.stringify(story));
-        let storyList = updateStoryIDs(idKey);
+        console.log(idKey);
+        const res = await fetch('/api/stories', {
+            method: 'POST',
+            headers: {'content-type': 'application/json'},
+            body: JSON.stringify({idKey, story})
+        });
+        const result = await res.json();
+        console.log(result);
     }
 
     function setTitle(e) {

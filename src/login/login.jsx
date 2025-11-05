@@ -6,9 +6,9 @@ export function Login(props) {
     const [email, setEmail] = React.useState();
     const [password, setPassword] = React.useState();
 
-    function getUsers() {
-        return JSON.parse(localStorage.getItem('users') || '[]');
-    }
+    // function getUsers() {
+    //     return JSON.parse(localStorage.getItem('users') || '[]');
+    // }
 
     async function LoginUser() {
         const res = await fetch('api/auth', {
@@ -18,6 +18,7 @@ export function Login(props) {
         });
         await res.json();
         if (res.ok) {
+            props.UpdateCurrentUser(email);
             console.log("login");
         } else {
             console.log("couldn't login");
@@ -25,6 +26,7 @@ export function Login(props) {
     }
 
     async function registerUser() {
+
         const res = await fetch('api/auth', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json'},

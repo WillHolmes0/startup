@@ -9,7 +9,7 @@ export function Feed() {
   const [viewCommentsVisibility, setViewCommentsVisibility] = React.useState(true);
   const [postCommentVisibility, setPostCommentVisibility] = React.useState(false);
   const [activeCommentsStoryID, setActiveCommentsStoryID] = React.useState(null);
-  const stories = React.useRef([]);
+  const stories = React.useRef(null);
   const [storyIDs, setStoryIDs] = React.useState([]);
 
   React.useEffect(() => {
@@ -39,12 +39,10 @@ export function Feed() {
   }
 
   function createAllStoryBlocks() {
-    console.log("createAllStoryBlocks call");
     console.log(storyIDs.length);
     const storyBlocks = [];
-    for (let i = 0; i < stories.length; i++) {
-      console.log(stories[i]);
-      storyBlocks.push(<li><StoryBlock story={stories[i]}/></li>)
+    for (const storyID of storyIDs) {
+      storyBlocks.push(<li><StoryBlock story={stories.current[storyID]} storyID={storyID} setActiveCommentsStoryID={setActiveCommentsStoryID}/></li>);
     }
     return storyBlocks;
   }
@@ -63,7 +61,7 @@ export function Feed() {
                     <h5>Post Comment</h5>
                 </button>    
             </nav>
-            {/* <ViewCommentsComponent visible={viewCommentsVisibility} storyID={activeCommentsStoryID}/> */}
+            <ViewCommentsComponent visible={viewCommentsVisibility} storyID={activeCommentsStoryID}/>
             <PostCommentSectionComponent visible={postCommentVisibility} storyID={activeCommentsStoryID}/>
         </aside>
     </main>

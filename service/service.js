@@ -61,9 +61,17 @@ app.post('/api/stories', (req, res) => {
 });
 
 app.get('/api/stories', (req, res) => {
-    console.log("in endpoint");
     res.send({storyIDs, stories});
-    console.log("endpoint send response");
+});
+
+app.put('/api/stories/likes', (req, res) => {
+    stories[req.body.storyID].likes = req.body.likes;
+    res.send(stories[req.body.storyID].likes);
+});
+
+app.post('/api/comments', (req, res) => {
+    stories[req.body.storyID].comments.push(req.body.comment);
+    console.log("success");
 })
  
 app.listen(port, function () {

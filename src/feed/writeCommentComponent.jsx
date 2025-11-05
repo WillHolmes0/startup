@@ -5,11 +5,14 @@ export function WriteCommentComponent(props) {
     let story = JSON.parse(localStorage.getItem(props.storyID))
     let comment = {};
 
-    function postComment() {
+    async function postComment() {
         if (story) {
             comment.type = "text";
-            story.comments.push(comment);
-            localStorage.setItem(props.storyID, JSON.stringify(story));
+            await fetch('/api/comments', {
+                method: 'PUT',
+                header: {'Content-type': 'application/json'},
+                body: JSON.stringify(comment)
+            });
         }
     }
 

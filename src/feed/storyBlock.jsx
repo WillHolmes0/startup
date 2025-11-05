@@ -7,10 +7,15 @@ export function StoryBlock(props) {
     let story = props.story;
     const [likeCount, setLikeCount] = React.useState(story.likes);
     
-    function updateLikeCount() {
+    async function updateLikeCount() {
         let newLikeCount = likeCount + 1;
         story.likes = newLikeCount;
-        localStorage.setItem(props.storyID, JSON.stringify(story));
+        console.log({story});
+        const res = await fetch('/api/stories/likes', {
+            method: 'PUT',
+            headers: {'Content-type': 'application/json'},
+            body: JSON.stringify({storyID: props.storyID, likes: newLikeCount})
+        });
         setLikeCount(newLikeCount);
     }
 

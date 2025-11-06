@@ -21,14 +21,12 @@ export function WriteStory() {
         story.likes = 0;
         story.comments = [];
         let idKey = generateID();
-        console.log(idKey);
         const res = await fetch('/api/story', {
             method: 'POST',
             headers: {'content-type': 'application/json'},
             body: JSON.stringify({idKey, story})
         });
         const result = await res.json();
-        console.log(result);
     }
 
     function setTitle(e) {

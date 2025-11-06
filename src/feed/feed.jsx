@@ -15,7 +15,6 @@ export function Feed() {
   React.useEffect(() => {
     getAllIDs()
       .then(() => {
-        console.log(storyIDs.current);
         getAllStories();
       });
   }, []);

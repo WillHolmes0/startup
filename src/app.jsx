@@ -12,7 +12,7 @@ export default function App() {
     const [currentUser, setCurrentUser] = React.useState(localStorage.getItem('currentUser'));
 
     function navigation() {
-        if (currentUser != null || currentUser == null) {
+        if (currentUser != null) {
             return (
                 <nav className="navigation">
                     <button> 

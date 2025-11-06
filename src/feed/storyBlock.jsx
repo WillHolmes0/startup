@@ -5,7 +5,6 @@ import { useEffect } from 'react';
 export function StoryBlock(props) {
 
     const story = props.story;
-    console.log(story);
     const [likeCount, setLikeCount] = React.useState(story.likes);
     
     async function updateLikeCount() {

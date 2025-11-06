@@ -11,7 +11,7 @@ const users = [];
 const stories = {};
 const storyIDs = [];
 
-const port  = process.argv.length > 2 ? process.argv[2] : 3000;
+const port  = process.argv.length > 2 ? process.argv[2] : 4000;
 
 app.post('/api/auth', async (req, res) => {
     if (getUser('email', req.body.email)) {
@@ -33,13 +33,14 @@ app.put('/api/auth', async (req, res) => {
     }
 });
 
-app.delete('api/auth', (req, res) => {
+app.delete('/api/auth', (req, res) => {
     const token = req.cookies['token'];
     const user = getUser('token', token);
     if (user) {
-        clearAuthCookie(res, user);
+        delete user.token;
     }
-    res.send({});
+    clearAuthCookie(res, user);
+    res.status(204).end();
 })
 
 app.get('/api/user/me', (req, res) => {

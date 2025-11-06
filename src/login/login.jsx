@@ -26,8 +26,7 @@ export function Login(props) {
     }
 
     async function registerUser() {
-
-        const res = await fetch('api/auth', {
+        const res = await fetch('/api/auth', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json'},
             body: JSON.stringify({ email, password})
@@ -38,6 +37,15 @@ export function Login(props) {
         } else {
             console.log("failure");
         }
+    }
+
+    async function LogoutUser() {
+        const res = await fetch('api/auth',  {
+            method: 'DELETE',
+            headers: {'Content-Type': 'application/json'}
+        });
+        console.log("here");
+        localStorage.removeItem('currentUser');
     }
 
     function getEmail(e) {
@@ -63,6 +71,7 @@ export function Login(props) {
                     </div>
                     <div className="login-button">
                         <button onClick={LoginUser} >Login</button>
+                        <button onClick={LogoutUser}>Logout</button>
                         <button onClick={registerUser} >Register</button>
                     </div>
                 </div>

@@ -24,7 +24,6 @@ app.post('/api/auth', async (req, res) => {
 });
 
 app.put('/api/auth', async (req, res) => {
-    console.log(req.body);
     const user = getUser('email', req.body.email);
     if (user && await bcrypt.compare(req.body.password, user.password)) {
         setAuthCookie(res, user);
@@ -53,16 +52,21 @@ app.get('/api/user/me', (req, res) => {
     }
 });
 
-app.post('/api/stories', (req, res) => {
+app.post('/api/story', (req, res) => {
     stories[req.body.idKey] = req.body.story;
     storyIDs.push(req.body.idKey);
     res.send({idKey: req.body.idKey});
-    console.log(storyIDs.length);
 });
 
-app.get('/api/stories', (req, res) => {
-    res.send({storyIDs, stories});
+app.get('/api/story', (req, res) => {
+    const storyID = req.query.storyID;
+    const story = stories[storyID];
+    res.send({story});
 });
+
+app.get('/api/storyKeys', (req, res) => {
+    res.send({storyIDs});
+})
 
 app.put('/api/stories/likes', (req, res) => {
     stories[req.body.storyID].likes = req.body.likes;
@@ -71,8 +75,7 @@ app.put('/api/stories/likes', (req, res) => {
 
 app.post('/api/comments', (req, res) => {
     stories[req.body.storyID].comments.push(req.body.comment);
-    console.log("success");
-})
+});
  
 app.listen(port, function () {
     console.log(`Listening on port ${port}`);

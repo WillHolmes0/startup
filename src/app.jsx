@@ -13,7 +13,7 @@ export default function App() {
     const [currentUser, setCurrentUser] = React.useState(localStorage.getItem('currentUser'));
 
     useEffect(() => {
-        console.log(`changed user to ${currentUser}`);
+        // console.log(`changed user to ${currentUser}`);
     }, [currentUser]);
 
     function navigation() {

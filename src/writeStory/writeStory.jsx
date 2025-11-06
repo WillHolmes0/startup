@@ -29,7 +29,7 @@ export function WriteStory() {
         story.comments = [];
         let idKey = generateID();
         console.log(idKey);
-        const res = await fetch('/api/stories', {
+        const res = await fetch('/api/story', {
             method: 'POST',
             headers: {'content-type': 'application/json'},
             body: JSON.stringify({idKey, story})

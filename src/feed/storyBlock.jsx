@@ -4,16 +4,16 @@ import { useEffect } from 'react';
 
 export function StoryBlock(props) {
 
-    let story = props.story;
+    const story = props.story;
+    console.log(story);
     const [likeCount, setLikeCount] = React.useState(story.likes);
     
     async function updateLikeCount() {
         let newLikeCount = likeCount + 1;
         story.likes = newLikeCount;
-        console.log({story});
         const res = await fetch('/api/stories/likes', {
             method: 'PUT',
-            headers: {'Content-type': 'application/json'},
+            headers: {'content-type': 'application/json'},
             body: JSON.stringify({storyID: props.storyID, likes: newLikeCount})
         });
         setLikeCount(newLikeCount);

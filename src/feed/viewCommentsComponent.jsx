@@ -2,7 +2,19 @@ import './feed.css';
 import React from 'react';
 
   export function ViewCommentsComponent(props) {
-    const story = JSON.parse(localStorage.getItem(props.storyID) || null);
+    let story = React.useRef(null);
+
+    React.useEffect(() => {
+        story = getStory()
+    });
+
+    async function getStory() {
+        const res = await fetch('/api/stories', {
+            method: 'GET',
+            headers: {'content-type': 'application/json'},
+            body: {}
+        })
+    }
     
     function showStoryComments() {
         if (story != null) {

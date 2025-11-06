@@ -2,16 +2,15 @@ import React from 'react';
 import './feed.css';
 
 export function WriteCommentComponent(props) {
-    let story = JSON.parse(localStorage.getItem(props.storyID))
-    let comment = {};
+    const comment = {};
 
     async function postComment() {
-        if (story) {
+        if (props.storyID) {
             comment.type = "text";
             await fetch('/api/comments', {
-                method: 'PUT',
-                header: {'Content-type': 'application/json'},
-                body: JSON.stringify(comment)
+                method: 'POST',
+                headers: {'content-type': 'application/json'},
+                body: JSON.stringify({comment: comment, storyID: props.storyID})
             });
         }
     }

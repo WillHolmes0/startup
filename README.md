@@ -132,12 +132,20 @@ Some information regarding the use of the website.
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Node.js/Express HTTP service** - I did not complete this part of the deliverable.
-- [ ] **Static middleware for frontend** - I did not complete this part of the deliverable.
-- [ ] **Calls to third party endpoints** - I did not complete this part of the deliverable.
-- [ ] **Backend service endpoints** - I did not complete this part of the deliverable.
-- [ ] **Frontend calls service endpoints** - I did not complete this part of the deliverable.
-- [ ] **Supports registration, login, logout, and restricted endpoint** - I did not complete this part of the deliverable.
+- [x] **Node.js/Express HTTP service** - implemented.
+- [x] **Static middleware for frontend** - implemented as "app.use(express.static('public'))" in service.jsx
+- [x] **Calls to third party endpoints** - call to retrieve 5 gifs based on inputed search terms from tenor in postGifcomponent.jsx
+- [x] **Backend service endpoints** - registerUser, loginuser, logout user, post story, retrieve story, get story keys, update the likes of a story, add a comment to a story.
+- [x] **Frontend calls service endpoints**
+    * login.jsx supports the register, login, logout endpoints.
+    * feed.jsx calls an endpoint which gets all the storykeys, then uses that data to retrieve every story through the endpoint which retrieves a story. 
+    * postgifcomponent.jsx has teh 3rd party api which retrieves gifs, and uses an endpoint that adds a comment to a story. 
+    * storyblock.jsx uses the endpoint which edits the comment count.
+    * viewCommentsComponent.jsx uses the endpoint that retrieves a story in order to display its associated comments.
+    * writeCommentComponent.jsx also uses the endpoint that adds a comment to a story. 
+    * writeStory.jsx uses the endpoint that adds a story.
+
+- [x] **Supports registration, login, logout, and restricted endpoint** - endpoint for the first three, the restricted endpoint is the 401 unauthorized error thrown by the verifyAuth middleware. All endpoints are called from login.jsx
 
 
 ## 🚀 DB deliverable

@@ -7,13 +7,6 @@ import {useEffect} from 'react';
 export function WriteStory() {
     const story = {};
 
-    // function updateStoryIDs(storyID) {
-    //     const storyIDs = JSON.parse(localStorage.getItem('storyIDs') || '[]');
-    //     storyIDs.push(storyID);
-    //     localStorage.setItem('storyIDs', JSON.stringify(storyIDs));
-    //     return storyIDs;
-    // }
-
     function generateID() {
         let idNumber = Math.round(Math.random() * 10000)
         let idKey = "story" + idNumber.toString();

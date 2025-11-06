@@ -8,6 +8,7 @@ export function PostGifComponent(props) {
     const searchTerms = React.useRef(null);
     const tenorApiKey = 'AIzaSyAvavIKC3XXYRPaMUhnEoHPLMMEb3sA9aQ';
     
+    //The fetch here is the 3rd party api call
     async function getGifList() {
         const newGifList = [];
         const res = await fetch(`https://tenor.googleapis.com/v2/search?key=${tenorApiKey}&q=${searchTerms.current}&limit=5`);

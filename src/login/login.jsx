@@ -6,9 +6,6 @@ export function Login(props) {
     const [email, setEmail] = React.useState();
     const [password, setPassword] = React.useState();
 
-    // function getUsers() {
-    //     return JSON.parse(localStorage.getItem('users') || '[]');
-    // }
 
     async function LoginUser() {
         const res = await fetch('api/auth', {
@@ -16,10 +13,9 @@ export function Login(props) {
             headers: { 'Content-Type': 'application/json'},
             body: JSON.stringify({email, password})
         });
-        await res.json();
         if (res.ok) {
             props.UpdateCurrentUser(email);
-            console.log("login");
+            console.log("logged in");
         } else {
             console.log("couldn't login");
         }
@@ -31,11 +27,11 @@ export function Login(props) {
             headers: { 'Content-Type': 'application/json'},
             body: JSON.stringify({ email, password})
         });
-        await res.json();
         if (res.ok) {
-            console.log("sucess");
+            props.UpdateCurrentUser(email);
+            console.log("register sucess");
         } else {
-            console.log("failure");
+            console.log("register failure");
         }
     }
 
@@ -44,8 +40,8 @@ export function Login(props) {
             method: 'DELETE',
             headers: {'Content-Type': 'application/json'}
         });
-        console.log("here");
         localStorage.removeItem('currentUser');
+        props.UpdateCurrentUser(null);
     }
 
     function getEmail(e) {

@@ -32,6 +32,7 @@ export function Feed() {
 
   async function getAllStories() {
     const retrievedStories = {};
+    if (storyIDs.current == null) {return}
     for (const id of storyIDs.current) {
       const res = await fetch(`/api/story?storyID=${id}`);
       const parsedStory = await res.json();

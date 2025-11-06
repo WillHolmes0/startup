@@ -9,15 +9,10 @@ import { Feed } from './feed/feed';
 import { WriteStory } from './writeStory/writeStory';
 
 export default function App() {
-    const users = JSON.parse(localStorage.getItem('users') || '[]');
     const [currentUser, setCurrentUser] = React.useState(localStorage.getItem('currentUser'));
 
-    useEffect(() => {
-        // console.log(`changed user to ${currentUser}`);
-    }, [currentUser]);
-
     function navigation() {
-        if (currentUser != null) {
+        if (currentUser != null || currentUser == null) {
             return (
                 <nav className="navigation">
                     <button> 

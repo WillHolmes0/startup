@@ -10,7 +10,7 @@ export function PostGifComponent(props) {
     
     async function getGifList() {
         const newGifList = [];
-        const res = await fetch(`https://tenor.googleapis.com/v2/search?key=${tenorApiKey}&q=${searchTerms}&limit=5`);
+        const res = await fetch(`https://tenor.googleapis.com/v2/search?key=${tenorApiKey}&q=${searchTerms.current}&limit=5`);
         const parsedResponse = await res.json();
         for (let i = 0; i < parsedResponse.results.length; i++) {
             const gifUrl = `https://tenor.com/view/jujutsu-kaisen-nanami-gif-${parsedResponse.results[i].id}.gif`

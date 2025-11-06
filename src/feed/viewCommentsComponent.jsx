@@ -9,8 +9,7 @@ import React from 'react';
     });
 
     async function getStory() {
-        const res = await fetch(`/api/story?storyID=${props.storyID}`, {
-        })
+        const res = await fetch(`/api/story?storyID=${props.storyID}`);
         const parsedResponse = await res.json();
         setStory(parsedResponse.story);
     }

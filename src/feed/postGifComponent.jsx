@@ -5,31 +5,29 @@ import { useEffect } from 'react';
 export function PostGifComponent(props) {
     const [gifList, setGifList] = React.useState([]);
     const [selectedGif, setSelectedGif] = React.useState();
-    let story = JSON.parse(localStorage.getItem(props.storyID))
+    const searchTerms = React.useRef(null);
+    const tenorApiKey = 'AIzaSyAvavIKC3XXYRPaMUhnEoHPLMMEb3sA9aQ';
     
-    useEffect(() => {
-        getGifList();
-    }, []);
-    
-    function getGifList() {
-        const tempGifList = ["Jujutsu Kaisen Jjk GIF by Xbox.gif", "thumbs_up.png"];
+    async function getGifList() {
         const newGifList = [];
-        for (let i = 0; i < tempGifList.length; i++) {
-            newGifList.push(tempGifList[i]);
+        const res = await fetch(`https://tenor.googleapis.com/v2/search?key=${tenorApiKey}&q=${searchTerms}&limit=5`);
+        const parsedResponse = await res.json();
+        for (let i = 0; i < parsedResponse.results.length; i++) {
+            const gifUrl = `https://tenor.com/view/jujutsu-kaisen-nanami-gif-${parsedResponse.results[i].id}.gif`
+            newGifList.push(gifUrl);
         }
         setGifList(newGifList);
     }
     
-    function postGif() {
-        let comment = {};
-        if (selectedGif) {
-            if (story) {
-                comment.type = "gif";
-                comment.content = selectedGif;
-                story.comments.push(comment);
-                localStorage.setItem(props.storyID, JSON.stringify(story));
-            }
-        }   
+    async function postGif() {
+        if (props.storyID) {
+            const comment = {type: "gif", content: selectedGif};
+            await fetch('/api/comments', {
+                method: 'PUT',
+                headers: {'content-type': 'application/json'},
+                body: JSON.stringify({comment: comment, storyID: props.storyID})
+            });
+        }
     }
 
     function allGifOptions() {
@@ -44,10 +42,18 @@ export function PostGifComponent(props) {
         return (renderableGifs);
     }
 
+    function setSearchTerms(e) {
+        searchTerms.current = e.target.value;
+    }
+
     if (props.visible) {
         return (
             <section className="feed-scrollable">
-                <button onClick={postGif} className="post-comment-button">Post</button>
+                <input onChange={setSearchTerms} type="text" placeholder="search Gifs" className="feed-gif-search-box"/>
+                <div className="feed-gif-buttons">               
+                    <button onClick={getGifList} className="feed-gif-search-button">Search</button>
+                    <button onClick={postGif} className="post-comment-button">Post</button>
+                </div>
                 <div className="feed-comment-input">
                     {allGifOptions()}
                 </div>

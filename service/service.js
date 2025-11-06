@@ -76,6 +76,7 @@ app.put('/api/stories/likes', (req, res) => {
 app.put('/api/comments', (req, res) => {
     stories[req.body.storyID].comments.push(req.body.comment);
 });
+
  
 app.listen(port, function () {
     console.log(`Listening on port ${port}`);

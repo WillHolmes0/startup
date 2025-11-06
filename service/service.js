@@ -73,7 +73,7 @@ app.put('/api/stories/likes', (req, res) => {
     res.send(stories[req.body.storyID].likes);
 });
 
-app.post('/api/comments', (req, res) => {
+app.put('/api/comments', (req, res) => {
     stories[req.body.storyID].comments.push(req.body.comment);
 });
  

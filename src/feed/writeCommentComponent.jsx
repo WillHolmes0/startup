@@ -8,7 +8,7 @@ export function WriteCommentComponent(props) {
         if (props.storyID) {
             comment.type = "text";
             await fetch('/api/comments', {
-                method: 'POST',
+                method: 'PUT',
                 headers: {'content-type': 'application/json'},
                 body: JSON.stringify({comment: comment, storyID: props.storyID})
             });

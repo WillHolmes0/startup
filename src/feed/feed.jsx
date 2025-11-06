@@ -70,7 +70,7 @@ export function Feed() {
                     <h5>Post Comment</h5>
                 </button>    
             </nav>
-            {/* <ViewCommentsComponent visible={viewCommentsVisibility} storyID={activeCommentsStoryID}/> */}
+            <ViewCommentsComponent visible={viewCommentsVisibility} storyID={activeCommentsStoryID}/>
             <PostCommentSectionComponent visible={postCommentVisibility} storyID={activeCommentsStoryID}/>
         </aside>
     </main>

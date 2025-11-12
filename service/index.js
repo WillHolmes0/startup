@@ -2,6 +2,7 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const bcrypt = require('bcryptjs');
 const uuid = require('uuid');
+const db = require('./database.js');
 
 const app = express();
 app.use(express.json());
@@ -63,6 +64,7 @@ app.post('/api/story', verifyAuth, (req, res) => {
     stories[req.body.idKey] = req.body.story;
     storyIDs.push(req.body.idKey);
     res.send({idKey: req.body.idKey});
+    db.postStory(req.body.story);
 });
 
 //retrieve story

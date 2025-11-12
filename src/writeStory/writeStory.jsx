@@ -26,7 +26,6 @@ export function WriteStory() {
             headers: {'content-type': 'application/json'},
             body: JSON.stringify({idKey, story})
         });
-        const result = await res.json();
     }
 
     function setTitle(e) {

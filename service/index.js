@@ -16,11 +16,8 @@ const port  = process.argv.length > 2 ? process.argv[2] : 4000;
 
 //midpoint
 const verifyAuth = async (req, res, next) => {
-    console.log(req.cookies[authCookieName]);
     const user = await db.getUser({token: req.cookies[authCookieName]});
     if (user) {
-        console.log(user);
-        console.log("verified Auth");
         next();
     } else {
         res.status(401).send({ msg: 'Unauthorized'});
@@ -80,7 +77,6 @@ app.get('/api/story', verifyAuth, (req, res) => {
 app.get('/api/storyKeys', verifyAuth, (req, res) => {
     db.getStoryKeys()
         .then((storyIDs) => {
-            console.log(storyIDs);
             res.send({storyIDs});
         });
 })

@@ -152,8 +152,8 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Stores data in MongoDB** - I did not complete this part of the deliverable.
-- [ ] **Stores credentials in MongoDB** - I did not complete this part of the deliverable.
+- [x] **Stores data in MongoDB** - story data for stories includeing title, content, comments and likes. I have methods for retrieving the a story, adding comments to a story, adding likes to a story, adding a story to the database, and retrieving all the keys (these are the automatically generated _ids). (stories collection).
+- [x] **Stores credentials in MongoDB** - methods for adding, retrieving and updating users to properly login, logout and register a user. Auth token is created when a user logs in or is registered. (users collection). getUser is also used for authentication purposes to compare user.token to the browser authtoken. 
 
 ## 🚀 WebSocket deliverable
 

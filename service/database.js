@@ -5,6 +5,7 @@ const url = `mongodb+srv://${config.userName}:${config.password}@${config.hostna
 const client = new MongoClient(url);
 const db = client.db('startup');
 const storiesCollection = db.collection('stories');
+const usersCollection = db.collection('users');
 
 testConnection();
 
@@ -17,6 +18,18 @@ async function testConnection() {
         console.log(e);
         process.exit(1);
     }
+}
+
+async function addUser(user) {
+    await usersCollection.insertOne(user);
+}
+
+async function getUser(querey) {
+    return await usersCollection.findOne(querey);
+}
+
+async function updateUser(user) {
+    await usersCollection.updateOne({email: user.email}, {$set : user});
 }
 
 async function postStory(story) {
@@ -59,4 +72,7 @@ module.exports = {
     getStoryKeys,
     updateLikes,
     addComment,
+    getUser,
+    addUser,
+    updateUser
 };

@@ -27,7 +27,6 @@ async function getStory(storyID) {
     console.log(storyID);
     const storyObjectID = new ObjectId(storyID);
     const story = await storiesCollection.findOne({_id : storyObjectID});
-    console.log(story);
     return story;
 }
 
@@ -40,8 +39,25 @@ async function getStoryKeys() {
     return storyIDs;
 }
 
+async function updateLikes(storyID, newLikes) {
+    const storyObjectID = new ObjectId(storyID);
+    await storiesCollection.updateOne({_id: storyObjectID}, {$set : {likes: newLikes}});
+    const retrievedLikes = await storiesCollection.findOne({_id: storyObjectID});
+    return retrievedLikes.likes;
+}
+
+async function addComment(storyID, comment) {
+    const storyObjectID = new ObjectId(storyID);
+    const allComments = await storiesCollection.findOne({_id : storyObjectID}).comments;
+    console.log(allComments);
+    allComments.push(comment);
+    await storiesCollection.updateOne({_id: storyObjectID}, {$set: {comments: allComments}});
+}
+
 module.exports = {
     postStory,
     getStory,
     getStoryKeys,
+    updateLikes,
+    addComment,
 };

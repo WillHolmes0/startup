@@ -61,23 +61,28 @@ app.delete('/api/auth', verifyAuth, (req, res) => {
 
 //post story
 app.post('/api/story', verifyAuth, (req, res) => {
-    stories[req.body.idKey] = req.body.story;
-    storyIDs.push(req.body.idKey);
-    res.send({idKey: req.body.idKey});
+    // stories[req.body.idKey] = req.body.story;
+    // storyIDs.push(req.body.idKey);
+    // res.send({idKey: req.body.idKey});
     db.postStory(req.body.story);
+    //don't forget to add a response!
 });
 
 //retrieve story
 app.get('/api/story', verifyAuth, (req, res) => {
-    const storyID = req.query.storyID;
-    const story = stories[storyID];
-    res.send({story});
+    db.getStory(req.query.storyID)
+        .then((story) => res.send({story})
+    );
 });
 
 //get story keys
 //get the keys that can identify stories in the stories map
 app.get('/api/storyKeys', verifyAuth, (req, res) => {
-    res.send({storyIDs});
+    db.getStoryKeys()
+        .then((storyIDs) => {
+            console.log(storyIDs);
+            res.send({storyIDs});
+        });
 })
 
 //update the likes of a story

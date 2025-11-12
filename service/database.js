@@ -24,7 +24,6 @@ async function postStory(story) {
 }
 
 async function getStory(storyID) {
-    console.log(storyID);
     const storyObjectID = new ObjectId(storyID);
     const story = await storiesCollection.findOne({_id : storyObjectID});
     return story;
@@ -48,8 +47,8 @@ async function updateLikes(storyID, newLikes) {
 
 async function addComment(storyID, comment) {
     const storyObjectID = new ObjectId(storyID);
-    const allComments = await storiesCollection.findOne({_id : storyObjectID}).comments;
-    console.log(allComments);
+    const story = await storiesCollection.findOne({_id : storyObjectID});
+    const allComments = story.comments;
     allComments.push(comment);
     await storiesCollection.updateOne({_id: storyObjectID}, {$set: {comments: allComments}});
 }

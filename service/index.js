@@ -92,8 +92,10 @@ app.put('/api/stories/likes', verifyAuth, (req, res) => {
 
 //add a comment to a story
 app.put('/api/comments', verifyAuth, (req, res) => {
-    db.addComment(req.body.storyID, req.body.comment);
-    res.status(204).end();
+    db.addComment(req.body.storyID, req.body.comment)
+        .then(() => 
+            res.status(204).end()
+        );
 });
 
 

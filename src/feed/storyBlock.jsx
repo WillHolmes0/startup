@@ -15,7 +15,9 @@ export function StoryBlock(props) {
             headers: {'content-type': 'application/json'},
             body: JSON.stringify({storyID: props.storyID, likes: newLikeCount})
         });
-        setLikeCount(newLikeCount);
+        if (res.ok) {
+            setLikeCount(newLikeCount);
+        }
     }
 
     function setStoryComments() {

@@ -3,6 +3,7 @@ const cookieParser = require('cookie-parser');
 const bcrypt = require('bcryptjs');
 const uuid = require('uuid');
 const db = require('./database.js');
+const likesWebSocket = require('./webSocket.js').likesWebSocket;
 
 const app = express();
 app.use(express.json());
@@ -98,7 +99,7 @@ app.put('/api/comments', verifyAuth, (req, res) => {
 
 
  
-app.listen(port, function () {
+httpService = app.listen(port, function () {
     console.log(`Listening on port ${port}`);
 });
 
@@ -121,6 +122,7 @@ async function setAuthCookie(res, user) {
     });
 }
 
+likesWebSocket(httpService);
 
 
 

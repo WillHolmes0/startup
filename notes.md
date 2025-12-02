@@ -61,10 +61,6 @@ in the home.jsx file have a function called 'Home' that can be called.
 
 ## React Part 2: Reactivity
 
-This was a lot of fun to see it all come together. I had to keep remembering to use React state instead of just manipulating the DOM directly.
-
-Handling the toggling of the checkboxes was particularly interesting.
-
 ```jsx
 <div className="input-group sound-button-container">
   {calmSoundTypes.map((sound, index) => (
@@ -84,3 +80,5 @@ Handling the toggling of the checkboxes was particularly interesting.
   ))}
 </div>
 ```
+## Websocket
+

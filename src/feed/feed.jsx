@@ -4,6 +4,7 @@ import './feed.css';
 import { ViewCommentsComponent } from './viewCommentsComponent.jsx';
 import { PostCommentSectionComponent } from './postCommentSectionComponent.jsx';
 import { StoryBlock } from './storyBlock.jsx';
+import { LikeSocket } from './likeSocket.js';
 
 export function Feed() {
   const [viewCommentsVisibility, setViewCommentsVisibility] = React.useState(true);
@@ -11,6 +12,7 @@ export function Feed() {
   const [activeCommentsStoryID, setActiveCommentsStoryID] = React.useState(null);
   const storyIDs = React.useRef([]);
   const [stories, setStories] = React.useState({});
+  const likeSocket = React.useRef(new LikeSocket());
 
   React.useEffect(() => {
     getAllIDs()
@@ -51,7 +53,7 @@ export function Feed() {
     if (stories == null) {return}
     for (let i = 0; i < storyIDs.current.length; i++) {
       const storyID = storyIDs.current[i];
-      storyBlocks.push(<li><StoryBlock story={stories[storyID].story} storyID={storyID} setActiveCommentsStoryID={setActiveCommentsStoryID}/></li>);
+      storyBlocks.push(<li><StoryBlock story={stories[storyID].story} storyID={storyID} setActiveCommentsStoryID={setActiveCommentsStoryID} likeSocket={likeSocket}/></li>);
     }
     return storyBlocks;
   }

@@ -1,26 +1,33 @@
 
 
-class likeSocket {
+class LikeSocket {
 
     constructor() {
         const port = window.location.port;
         const protocol = window.location.protocol === 'https:' ? 'wss' : 'ws';
         const hostname = window.location.hostname;
-        const socket = new WebSocket(`${protocol}://${hostname}:${port}`);
+        this.socket = new WebSocket(`${protocol}://${hostname}:${port}/ws`);
+        console.log(`Connecting to WebSocket at ${protocol}://${hostname}:${port}/ws`);
+        this.socket.onopen = () => {
+            console.log("WebSocket connection established");
+        }
         
-        socket.onmessage = function(message) {
-            console.log("Received message:", message.data);
+        this.socket.onmessage = async function(message) {
+            const data = JSON.parse(await message.data.text());
+            console.log("Received like update via WebSocket:", data.newLikeCount);
         }
     }
 
-    broadcastlike(storyID, newLikeCount) {
-        socket.send(JSON.stringify(new likeUpdate(storyID, newLikeCount)));
+    broadcastLike(storyID, newLikeCount) {
+        this.socket.send(JSON.stringify(new LikeUpdate(storyID, newLikeCount)));
     }
 }
 
-class likeUpdate {
+class LikeUpdate {
     constructor(storyID, newLikeCount) {
         this.storyID = storyID;
         this.newLikeCount = newLikeCount;
     }   
 }
+
+export { LikeSocket };

@@ -17,6 +17,7 @@ export function StoryBlock(props) {
         });
         if (res.ok) {
             setLikeCount(newLikeCount);
+            props.likeSocket.current.broadcastLike(props.storyID, newLikeCount);
         }
     }
 

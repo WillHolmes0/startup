@@ -3,7 +3,7 @@ const cookieParser = require('cookie-parser');
 const bcrypt = require('bcryptjs');
 const uuid = require('uuid');
 const db = require('./database.js');
-const likesWebSocket = require('./webSocket.js').likesWebSocket;
+const peerProxy = require('./peerProxy.js').peerProxy;
 
 const app = express();
 app.use(express.json());
@@ -122,7 +122,7 @@ async function setAuthCookie(res, user) {
     });
 }
 
-likesWebSocket(httpService);
+peerProxy(httpService);
 
 
 

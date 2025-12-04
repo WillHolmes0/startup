@@ -159,8 +159,8 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Backend listens for WebSocket connection** - I did not complete this part of the deliverable.
-- [ ] **Frontend makes WebSocket connection** - I did not complete this part of the deliverable.
-- [ ] **Data sent over WebSocket connection** - I did not complete this part of the deliverable.
-- [ ] **WebSocket data displayed** - I did not complete this part of the deliverable.
-- [ ] **Application is fully functional** - I did not complete this part of the deliverable.
+- [x] **Backend listens for WebSocket connection** peerProxy.js + bottom of index.js
+- [x] **Frontend makes WebSocket connection** feed.jsx creates a websocket. webSocket code is in likeSocket.js
+- [x] **Data sent over WebSocket connection** - an object containing like count and newlikecount is send over the websocket. (likeSocket.js)
+- [x] **WebSocket data displayed** - this happens in the like count. (flow: likeSocket.updateLikeCount -> feed.jsx -> storyBlock.jsx) story block is a childComponent of feed.jsx
+- [] **Application is fully functional** Bugs: The story feed can scroll if there are enough stories, but some of the stories can still get lost behind the header and footer. There is also a bug allowing the navigation header to appear if the user is not logged in. if the user manually loggs out then it dissapears like it should. Aside from that the application works well. 

@@ -82,3 +82,7 @@ in the home.jsx file have a function called 'Home' that can be called.
 ```
 ## Websocket
 
+ - both a websocket and a websocket server are used. 
+ - when setting up the server, the handler for the socket.on(message) should me inside of the function for the websocketserver.on('connection', () => {}) function
+ - you need an on connect method for each. Each uses an object class, so they are kind of simple. 
+

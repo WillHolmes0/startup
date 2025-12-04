@@ -6,6 +6,9 @@ export function StoryBlock(props) {
 
     const story = props.story;
     const [likeCount, setLikeCount] = React.useState(story.likes);
+    if (likeCount != story.likes) {
+        setLikeCount(story.likes);
+    }
     
     async function updateLikeCount() {
         let newLikeCount = likeCount + 1;

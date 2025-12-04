@@ -2,19 +2,18 @@
 
 class LikeSocket {
 
-    constructor() {
+    constructor(updateStoryLikes) {
         const port = window.location.port;
         const protocol = window.location.protocol === 'https:' ? 'wss' : 'ws';
         const hostname = window.location.hostname;
         this.socket = new WebSocket(`${protocol}://${hostname}:${port}/ws`);
-        console.log(`Connecting to WebSocket at ${protocol}://${hostname}:${port}/ws`);
         this.socket.onopen = () => {
             console.log("WebSocket connection established");
         }
         
         this.socket.onmessage = async function(message) {
             const data = JSON.parse(await message.data.text());
-            console.log("Received like update via WebSocket:", data.newLikeCount);
+            updateStoryLikes(data.storyID, data.newLikeCount);
         }
     }
 

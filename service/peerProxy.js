@@ -5,7 +5,6 @@ function peerProxy(httpServer) {
 
     webSocketServer.on('connection', (clientSocket) => {
         console.log("New client connected");
-        clientSocket.isAlive = true;
 
         clientSocket.on('message', (data) => sendMessage(webSocketServer, data, clientSocket));
     });

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './feed.css';
 import { ViewCommentsComponent } from './viewCommentsComponent.jsx';
 import { PostCommentSectionComponent } from './postCommentSectionComponent.jsx';
@@ -12,14 +12,26 @@ export function Feed() {
   const [activeCommentsStoryID, setActiveCommentsStoryID] = React.useState(null);
   const storyIDs = React.useRef([]);
   const [stories, setStories] = React.useState({});
-  const likeSocket = React.useRef(new LikeSocket());
+  const likeSocket = React.useRef(null);
 
   React.useEffect(() => {
     getAllIDs()
       .then(() => {
-        getAllStories();
+        getAllStories()
       });
+
+    likeSocket.current = new LikeSocket(updateStoryLikes);
+    return () => {
+      likeSocket.current.socket.close();
+    }
   }, []);
+
+  async function updateStoryLikes(storyID, newLikeCount) {
+    const currentStories = await getAllStories();
+    currentStories[storyID].story.likes = newLikeCount;
+
+    setStories(currentStories);
+  }
 
   function activateViewCommentsVisibility() {
     setViewCommentsVisibility(true);
@@ -40,6 +52,7 @@ export function Feed() {
       retrievedStories[id] = parsedStory;
     }
     setStories(retrievedStories);
+    return retrievedStories;
   }
 
   async function getAllIDs() {
